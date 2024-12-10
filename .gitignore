@@ -24,3 +24,5 @@ dist-ssr
 *.sw?
 backend/mantra
 *.pt
+backend/bmth-sa-key.json
+backend/config.py
