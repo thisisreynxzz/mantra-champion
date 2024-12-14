@@ -4,11 +4,105 @@ import websockets
 from speechToText import MicrophoneStream, listen_print_loop
 from google.cloud import speech
 from config import SA_JSON_FILE_PATH
+import vertexai
+from vertexai.generative_models import GenerativeModel, GenerationConfig
+import datetime
+
+def init_vertexai(project_id, location="us-central1"):
+    """Initialize VertexAI with project settings."""
+    vertexai.init(project=project_id, location=location)
+    return GenerativeModel("gemini-1.5-flash")
+
+def get_response_schema():
+    return {
+        "type": "object",
+        "properties": {
+            "intent": {
+                "type": "object",
+                "properties": {
+                    "type": {
+                        "type": "string",
+                        "enum": ["asking_for_direction", "analyzing_surroundings", "service_recommendation"]
+                    },
+                    "confidence": {"type": "number"}
+                },
+                "required": ["type", "confidence"]
+            },
+            "entities": {
+                "type": "array",
+                "items": {
+                    "type": "object",
+                    "properties": {
+                        "type": {
+                            "type": "string",
+                            "enum": ["station", "poi", "terminal", "route", "transport_type", "obstacle", "facility"]
+                        },
+                        "value": {"type": "string"},
+                        "start": {"type": "integer"},
+                        "end": {"type": "integer"}
+                    },
+                    "required": ["type", "value", "start", "end"]
+                }
+            }
+        },
+        "required": ["intent", "entities"]
+    }
+
+def create_classification_prompt(text):
+    return f"""Analyze the following user utterance for intent and entities related to Jakarta public transportation:
+
+"{text}"
+
+Classify the intent as one of:
+- asking_for_direction: Questions about getting somewhere using public transport
+- analyzing_surroundings: Questions about immediate environment/obstacles near transport facilities
+- service_recommendation: Questions about recommended routes or transport options
+
+Identify entities including:
+- stations (MRT/KRL)
+- POIs (landmarks, malls)
+- terminals
+- routes
+- transport types
+- obstacles
+- facilities
+
+Return structured JSON with intent type, confidence score (0-1), and entity mentions with their positions."""
+
+async def classify_intent_and_entities(transcript, model):
+    """Classify intent and extract entities from speech transcript using Gemini."""
+    try:
+        response = model.generate_content(
+            create_classification_prompt(transcript),
+            generation_config=GenerationConfig(
+                temperature=0.1,  # Low temperature for consistent classification
+                candidate_count=1,
+                max_output_tokens=1024,
+                response_mime_type="application/json",
+                response_schema=get_response_schema()
+            )
+        )
+        
+        classification = json.loads(response.text)
+        return classification
+        
+    except Exception as e:
+        print(f"Error in classification: {e}")
+        return {
+            "intent": {"type": "unknown", "confidence": 0.0},
+            "entities": []
+        }
 
 async def speech_recognition_handler(websocket):
     try:
         print("Client connected to speech recognition")
+        
+        # Initialize Speech-to-Text client
         client = speech.SpeechClient.from_service_account_file(SA_JSON_FILE_PATH)
+        
+        # Initialize Gemini model
+        PROJECT_ID = 'ai-for-impact-bmth'
+        model = init_vertexai(PROJECT_ID)
         
         # Configure audio settings
         config = speech.RecognitionConfig(
@@ -93,19 +187,61 @@ async def speech_recognition_handler(websocket):
 
                 transcript = result.alternatives[0].transcript
 
-                # Send transcript to websocket client
-                await websocket.send(json.dumps({
-                    "transcript": transcript,
-                    "is_final": result.is_final
-                }))
+                # Only perform classification on final results
+                if result.is_final:
+                    try:
+                        # Get intent and entity classification
+                        classification = await classify_intent_and_entities(transcript, model)
+                        
+                        # Send transcript and classification to websocket client
+                        await websocket.send(json.dumps({
+                            "transcript": transcript,
+                            "is_final": True,
+                            "classification": classification,
+                            "confidence": result.alternatives[0].confidence,
+                            "timestamp": datetime.datetime.now().isoformat()
+                        }))
+                        
+                        # Log the classification for debugging
+                        print(f"Classification for: {transcript}")
+                        print(json.dumps(classification, indent=2))
+                        
+                    except Exception as class_error:
+                        print(f"Classification error: {class_error}")
+                        # Send transcript without classification if there's an error
+                        await websocket.send(json.dumps({
+                            "transcript": transcript,
+                            "is_final": True,
+                            "error": str(class_error),
+                            "confidence": result.alternatives[0].confidence,
+                            "timestamp": datetime.datetime.now().isoformat()
+                        }))
+                else:
+                    # Send interim results without classification
+                    await websocket.send(json.dumps({
+                        "transcript": transcript,
+                        "is_final": False,
+                        "confidence": result.alternatives[0].confidence,
+                        "timestamp": datetime.datetime.now().isoformat()
+                    }))
 
+                # Check for exit commands
                 if result.is_final and any(word in transcript.lower() for word in ["exit", "quit"]):
+                    print("Exit command received")
                     break
 
     except websockets.exceptions.ConnectionClosed:
         print("Client disconnected from speech recognition")
     except Exception as e:
         print(f"Error in speech recognition: {e}")
+        # Try to send error message to client if connection is still open
+        try:
+            await websocket.send(json.dumps({
+                "error": str(e),
+                "timestamp": datetime.datetime.now().isoformat()
+            }))
+        except:
+            pass
 
 async def main():
     async with websockets.serve(speech_recognition_handler, "localhost", 8000) as server:

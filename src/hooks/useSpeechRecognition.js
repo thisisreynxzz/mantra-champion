@@ -4,12 +4,14 @@ import { useState, useEffect, useRef } from 'react';
 export const useSpeechRecognition = () => {
   const [isListening, setIsListening] = useState(false);
   const [transcript, setTranscript] = useState('');
+  const [intent, setIntent] = useState(null);
+  const [entities, setEntities] = useState([]);
+  const [confidence, setConfidence] = useState(0);
   const wsRef = useRef(null);
 
   useEffect(() => {
     if (isListening && !wsRef.current) {
       try {
-        // Simple WebSocket connection without subprotocols
         wsRef.current = new WebSocket('ws://localhost:8000');
         
         console.log('Attempting Speech WebSocket connection...');
@@ -25,9 +27,14 @@ export const useSpeechRecognition = () => {
             if (data.transcript) {
               setTranscript(data.transcript);
               
-              const text = data.transcript.toLowerCase();
-              if (text.includes('mantra')) {
-                console.log('MANTRA detected!');
+              // Handle final results with classification
+              if (data.is_final && data.classification) {
+                setIntent(data.classification.intent);
+                setEntities(data.classification.entities);
+                setConfidence(data.confidence || 0);
+                
+                // Handle specific intents
+                handleIntent(data.classification.intent, data.classification.entities);
               }
             }
           } catch (err) {
@@ -59,6 +66,31 @@ export const useSpeechRecognition = () => {
     };
   }, [isListening]);
 
+  const handleIntent = (intent, entities) => {
+    switch (intent.type) {
+      case 'asking_for_direction':
+        // Extract destination from entities and trigger navigation
+        const destination = entities.find(e => 
+          ['station', 'poi', 'terminal'].includes(e.type)
+        );
+        if (destination) {
+          // You can emit an event or call a callback here
+          console.log(`Navigation request to: ${destination.value}`);
+        }
+        break;
+        
+      case 'analyzing_surroundings':
+        // Trigger surroundings analysis mode
+        console.log('Analyzing surroundings...');
+        break;
+        
+      case 'service_recommendation':
+        // Handle route recommendations
+        console.log('Generating service recommendations...');
+        break;
+    }
+  };
+
   const startListening = () => {
     console.log('Starting speech recognition...');
     setIsListening(true);
@@ -76,6 +108,9 @@ export const useSpeechRecognition = () => {
   return {
     isListening,
     transcript,
+    intent,
+    entities,
+    confidence,
     startListening,
     stopListening
   };
