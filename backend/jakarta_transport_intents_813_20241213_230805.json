@@ -1,0 +1,3254 @@
+[
+  {
+    "intent": "asking_for_direction",
+    "text": "How do I get to the nearest TransJakarta bus stop from here?"
+  },
+  {
+    "intent": "asking_for_direction",
+    "text": "What's the best way to get to the Mangga Besar MRT station from the Kota Station using the KRL?"
+  },
+  {
+    "intent": "asking_for_direction",
+    "text": "Can you give me directions to the Blok M station from the Senayan station using TransJakarta?"
+  },
+  {
+    "intent": "asking_for_direction",
+    "text": "I need to go to the Gambir station from the Monas area, what's the best way to do that?"
+  },
+  {
+    "intent": "asking_for_direction",
+    "text": "How can I get to the nearest KRL station from the Grand Indonesia Mall?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Are there any steps or obstacles in front of the MRT entrance?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Is there a tactile path leading to the ticket vending machine?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Can you tell me if there are any potholes or uneven surfaces on this sidewalk?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Where are the guide blocks located near the TransJakarta bus stop?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Is there a ramp or an elevator to access the platform at the Sudirman station?"
+  },
+  {
+    "intent": "service_recommendation",
+    "text": "What's the most accessible route to the Tanah Abang station from here?"
+  },
+  {
+    "intent": "service_recommendation",
+    "text": "Which TransJakarta bus route is best for a visually impaired person travelling to the Dukuh Atas station?"
+  },
+  {
+    "intent": "service_recommendation",
+    "text": "Can you recommend the most accessible way to get to the Gambir station from the Thamrin area?"
+  },
+  {
+    "intent": "service_recommendation",
+    "text": "What's the best way to get to the nearest KRL station from the Sarinah building, considering accessibility?"
+  },
+  {
+    "intent": "service_recommendation",
+    "text": "Is there a specific TransJakarta bus route that is more accessible than others?"
+  },
+  {
+    "intent": "asking_for_direction",
+    "text": "Can you guide me to the nearest TransJakarta bus stop from my current location?"
+  },
+  {
+    "intent": "asking_for_direction",
+    "text": "What's the fastest way to reach the Dukuh Atas MRT station from the National Museum?"
+  },
+  {
+    "intent": "asking_for_direction",
+    "text": "I'm trying to find the closest KRL station to the Thamrin City Mall, could you help me?"
+  },
+  {
+    "intent": "asking_for_direction",
+    "text": "How do I get to the nearest TransJakarta bus stop from the Plaza Indonesia Mall?"
+  },
+  {
+    "intent": "asking_for_direction",
+    "text": "Can you provide me with directions to the Mangga Besar MRT station from the National Monument?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Is there an audio announcement system at this KRL station?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Are there any tactile markings or signs near the ticket machine?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Can you tell me if there are any sharp edges or protruding objects near the TransJakarta bus stop?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Is there a dedicated accessible entrance at the MRT station?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Where are the tactile paths located near the KRL platform?"
+  },
+  {
+    "intent": "service_recommendation",
+    "text": "What's the most accessible way to get to the Sudirman station from here during rush hour?"
+  },
+  {
+    "intent": "service_recommendation",
+    "text": "Can you recommend the best TransJakarta bus route for a visually impaired person travelling to the Kota station?"
+  },
+  {
+    "intent": "service_recommendation",
+    "text": "What's the most accessible route to the nearest KRL station from the Grand Indonesia Mall?"
+  },
+  {
+    "intent": "service_recommendation",
+    "text": "Which TransJakarta bus route is the most accessible and reliable for a visually impaired person travelling to the Blok M station?"
+  },
+  {
+    "intent": "service_recommendation",
+    "text": "Can you suggest the best way to get to the nearest MRT station from the Sarinah building, considering accessibility?"
+  },
+  {
+    "intent": "asking_for_direction",
+    "text": "Can you tell me the best way to get to the Gambir Station from Pasar Baru using TransJakarta?"
+  },
+  {
+    "intent": "asking_for_direction",
+    "text": "What's the fastest route to reach the Blok M MRT station from the Senayan area using the KRL?"
+  },
+  {
+    "intent": "asking_for_direction",
+    "text": "I'm near the Monas, how do I take the TransJakarta to the National Museum?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Are there any stairs or ramps at the entrance of the Dukuh Atas MRT station?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Is there a tactile path leading to the ticket machine at the Tanah Abang Station?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "I'm at the bus stop in front of the Grand Indonesia Mall, are there any obstacles I should be aware of?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Is there a guide block leading to the KRL platform at the Sudirman Station?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Can you tell me if there are any audio cues at the MRT station at the Bundaran HI?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Is there an elevator available at the entrance of the Manggarai Station?"
+  },
+  {
+    "intent": "service_recommendation",
+    "text": "What's the most accessible way to travel from the Kota Station to the Thamrin City Mall using public transport?"
+  },
+  {
+    "intent": "service_recommendation",
+    "text": "Can you recommend the best route for a visually impaired person to get from the Senayan area to the Grand Indonesia Mall using TransJakarta?"
+  },
+  {
+    "intent": "service_recommendation",
+    "text": "I'm looking for the easiest way to travel from the Blok M MRT station to the Pasar Minggu area using TransJakarta, taking into account accessibility."
+  },
+  {
+    "intent": "asking_for_direction",
+    "text": "How can I get to the Senayan Station from the Plaza Semanggi using the KRL?"
+  },
+  {
+    "intent": "asking_for_direction",
+    "text": "What is the best way to take the TransJakarta from the Ragunan Zoo to the Halim Perdanakusuma Airport?"
+  },
+  {
+    "intent": "asking_for_direction",
+    "text": "Could you please tell me the most direct route to the Sudirman Station from the Kuningan area using public transport?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Are there any steps at the entrance of the MRT station at the Lebak Bulus terminal?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Is the sidewalk in front of the TransJakarta bus stop at the Plaza Semanggi smooth and accessible?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Is there a tactile path leading to the platform at the KRL station in Manggarai?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "What is the layout of the MRT station at the Bundaran HI?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Are there any audio announcements at the TransJakarta bus stop in front of the National Museum?"
+  },
+  {
+    "intent": "service_recommendation",
+    "text": "What is the most accessible way to travel from the Tanah Abang Station to the Plaza Indonesia Mall using public transport?"
+  },
+  {
+    "intent": "service_recommendation",
+    "text": "Could you recommend the best route for a visually impaired person to travel from the Monas to the Kota Station using the TransJakarta?"
+  },
+  {
+    "intent": "service_recommendation",
+    "text": "I'm looking for an accessible way to travel from the Grand Indonesia Mall to the Senayan area using public transport."
+  },
+  {
+    "intent": "asking_for_direction",
+    "text": "Can you tell me how to get to the Pasar Baru Station from the Mangga Besar area using the KRL?"
+  },
+  {
+    "intent": "asking_for_direction",
+    "text": "I'm near the Bundaran HI, how do I take the TransJakarta to the Ragunan Zoo?"
+  },
+  {
+    "intent": "asking_for_direction",
+    "text": "What is the best way to get to the Blok M Station from the Kuningan area using the TransJakarta?"
+  },
+  {
+    "intent": "asking_for_direction",
+    "text": "Can you tell me how to get to the Blok M station from the Senayan station on the MRT?"
+  },
+  {
+    "intent": "asking_for_direction",
+    "text": "What's the best way to get to the Tanah Abang station from here using the TransJakarta bus?"
+  },
+  {
+    "intent": "asking_for_direction",
+    "text": "I'm at the Manggarai station. How do I take the KRL to the Jakarta Kota station?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Is there a tactile path leading to the entrance of the MRT station?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Are there any steps or obstacles near the bus stop at the Dukuh Atas station?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Can you tell me if there are any potholes on the sidewalk near the KRL station at Sudirman?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Where is the nearest guide block to the ticket machine at the TransJakarta bus stop?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Is there a ramp or elevator leading up to the platform at the MRT station?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Can you describe the layout of the station? Are there any seating areas or information desks nearby?"
+  },
+  {
+    "intent": "service_recommendation",
+    "text": "What's the most accessible route to get to the Senayan station from here?"
+  },
+  {
+    "intent": "service_recommendation",
+    "text": "Which is the best option for traveling to the Tanah Abang station: TransJakarta, MRT, or KRL?"
+  },
+  {
+    "intent": "service_recommendation",
+    "text": "What are the best times to take the KRL from the Manggarai station to avoid crowds?"
+  },
+  {
+    "intent": "asking_for_direction",
+    "text": "Hey, can you help me figure out how to reach the Monas station on the MRT?"
+  },
+  {
+    "intent": "asking_for_direction",
+    "text": "How do I get to the Lebak Bulus station from here using the TransJakarta?"
+  },
+  {
+    "intent": "asking_for_direction",
+    "text": "Could you tell me how to get to the Jatinegara station on the KRL?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Are there any sounds or audio cues that indicate the location of the platform at the MRT station?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Is there a tactile path to the exit of the TransJakarta bus stop near the Blok M station?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Are there any steps or ramps leading to the KRL station at the Sudirman station?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Where are the information desks and toilets located within the station?"
+  },
+  {
+    "intent": "service_recommendation",
+    "text": "What's the most wheelchair-accessible route to get to the Sudirman station?"
+  },
+  {
+    "intent": "service_recommendation",
+    "text": "Which transport option would be best for someone with visual impairment to reach the Tanah Abang station?"
+  },
+  {
+    "intent": "service_recommendation",
+    "text": "What's the fastest and most convenient route to get to the Manggarai station, considering accessibility needs?"
+  },
+  {
+    "intent": "asking_for_direction",
+    "text": "How do I reach the Dukuh Atas station on the MRT from here?"
+  },
+  {
+    "intent": "asking_for_direction",
+    "text": "Can you tell me how to get to the Lebak Bulus station using the TransJakarta, please?"
+  },
+  {
+    "intent": "asking_for_direction",
+    "text": "What's the best way to reach the Jakarta Kota station on the KRL from here?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Are there any guide blocks or tactile paths leading to the ticket machines at the MRT station?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Is there a designated area for visually impaired passengers at the TransJakarta bus stop?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Are there any audible announcements or visual displays that indicate the arrival and departure of trains at the KRL station?"
+  },
+  {
+    "intent": "service_recommendation",
+    "text": "What's the most accessible way to reach the Monas station, considering I have low vision?"
+  },
+  {
+    "intent": "service_recommendation",
+    "text": "Which transport option would be best for me to get to the Jatinegara station, given that I use a walking stick?"
+  },
+  {
+    "intent": "asking_for_direction",
+    "text": "Can you tell me how to get to the nearest TransJakarta bus stop from the National Museum, please?"
+  },
+  {
+    "intent": "asking_for_direction",
+    "text": "What's the best way to reach the Mangga Besar MRT station from Senayan using public transport?"
+  },
+  {
+    "intent": "asking_for_direction",
+    "text": "I'm at the Sudirman Station. How do I get to the Blok M Station using the KRL?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Is there a tactile path leading to the entrance of the MRT station at Dukuh Atas?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Are there any steps or obstacles in front of the TransJakarta bus stop at the Bundaran HI?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Can you tell me if there's a ramp or elevator to access the platform at the Tanah Abang Station?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Is there a guide block leading to the ticket machine at the MRT station near the Grand Indonesia Mall?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Are there any potholes or uneven surfaces on the sidewalk near the KRL station at Jatinegara?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Can you tell me if there are any audio cues or announcements at the TransJakarta bus stop in front of the City Hall?"
+  },
+  {
+    "intent": "service_recommendation",
+    "text": "What's the most convenient way to get from the Senayan Station to the National Monument in the evening?"
+  },
+  {
+    "intent": "service_recommendation",
+    "text": "Could you suggest the most accessible route to reach the Blok M Station from the Sudirman Station during peak hours?"
+  },
+  {
+    "intent": "service_recommendation",
+    "text": "What's the best option for traveling from the Grand Indonesia Mall to the Tanah Abang Station considering accessibility features?"
+  },
+  {
+    "intent": "service_recommendation",
+    "text": "Can you recommend a route from the Bundaran HI to the Mangga Besar MRT Station that's suitable for visually impaired travelers?"
+  },
+  {
+    "intent": "service_recommendation",
+    "text": "What's the most accessible way to get to the KRL station at Jatinegara from the City Hall?"
+  },
+  {
+    "intent": "asking_for_direction",
+    "text": "Hey, how can I get to the nearest TransJakarta bus stop from the National Library?"
+  },
+  {
+    "intent": "asking_for_direction",
+    "text": "Can you give me directions to the MRT station at Lebak Bulus from the Pasar Minggu Station?"
+  },
+  {
+    "intent": "asking_for_direction",
+    "text": "What's the best route to reach the KRL station at Depok from the Sudirman Station?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Is there an accessible entrance to the TransJakarta bus stop at the Hotel Indonesia?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Are there any steps or obstacles leading to the platform at the MRT station near the Senayan Station?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Can you tell me if there's a ramp or elevator available at the KRL station at Bogor?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Is there a guide block leading to the ticket machine at the TransJakarta bus stop near the National Monument?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Are there any potholes or uneven surfaces on the sidewalk near the MRT station at Dukuh Atas?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Can you tell me if there are any audio cues or announcements at the KRL station at Depok?"
+  },
+  {
+    "intent": "service_recommendation",
+    "text": "What's the most convenient way to get from the National Monument to the Grand Indonesia Mall in the morning?"
+  },
+  {
+    "intent": "service_recommendation",
+    "text": "Could you suggest the most accessible route to reach the Pasar Minggu Station from the Lebak Bulus Station during rush hour?"
+  },
+  {
+    "intent": "service_recommendation",
+    "text": "What's the best option for traveling from the Hotel Indonesia to the Sudirman Station considering accessibility features?"
+  },
+  {
+    "intent": "service_recommendation",
+    "text": "Can you recommend a route from the City Hall to the Bogor KRL Station that's suitable for visually impaired travelers?"
+  },
+  {
+    "intent": "asking_for_direction",
+    "text": "Can you tell me how to get to the nearest TransJakarta bus stop from here?"
+  },
+  {
+    "intent": "asking_for_direction",
+    "text": "I'm near the Bundaran HI, how do I take the MRT to Senayan Station?"
+  },
+  {
+    "intent": "asking_for_direction",
+    "text": "What's the best way to get to Blok M Station from the Kota Station using the KRL?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Is there a tactile path leading to the MRT entrance at Dukuh Atas Station?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Are there any steps or obstacles near the TransJakarta bus stop at Harmoni?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Can you tell me if there are any potholes or uneven surfaces on the sidewalk near the KRL station at Tanah Abang?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Is there a ramp or an elevator at the entrance to the MRT station near the Grand Indonesia?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Is the ticket machine at the TransJakarta bus stop at Manggarai accessible for a wheelchair?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Can you tell me if there are any guide blocks or audible signals near the KRL station at Sudirman?"
+  },
+  {
+    "intent": "service_recommendation",
+    "text": "What's the most accessible route to get to the National Museum from here using public transport?"
+  },
+  {
+    "intent": "service_recommendation",
+    "text": "Which public transport option is best for me to get to the Jakarta Convention Center from the airport?"
+  },
+  {
+    "intent": "service_recommendation",
+    "text": "Can you recommend the most accessible route to get to the Ragunan Zoo from the Blok M area?"
+  },
+  {
+    "intent": "asking_for_direction",
+    "text": "I need to get to the TransJakarta bus stop at the Taman Mini Indonesia Indah, can you help me find the way?"
+  },
+  {
+    "intent": "asking_for_direction",
+    "text": "How do I get to the MRT Station at Lebak Bulus from here using the TransJakarta?"
+  },
+  {
+    "intent": "asking_for_direction",
+    "text": "What's the fastest way to reach the KRL station at Jakarta Kota from the Gambir Station?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Are there any audio cues or announcements at the TransJakarta bus stop at Monas?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Is there a tactile path leading to the KRL station entrance at Duri?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Is there a ramp or an elevator available at the MRT station at Cipete?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Can you tell me if there are any obstacles or hazards near the TransJakarta bus stop at Kelapa Gading?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Are there any tactile markings or guide blocks near the KRL station at Depok?"
+  },
+  {
+    "intent": "service_recommendation",
+    "text": "What's the best way to get to the Ancol Dreamland from here using public transport, considering accessibility?"
+  },
+  {
+    "intent": "service_recommendation",
+    "text": "Can you recommend the most accessible route to get to the Museum of Fine Arts from the Senayan area?"
+  },
+  {
+    "intent": "service_recommendation",
+    "text": "I need to get to the Pasar Minggu area, what's the most accessible route using public transport?"
+  },
+  {
+    "intent": "asking_for_direction",
+    "text": "Can you please tell me how to get to the TransJakarta bus stop at the Mangga Dua area?"
+  },
+  {
+    "intent": "asking_for_direction",
+    "text": "How do I get to the MRT Station at Bundaran HI from the Pasar Senen area?"
+  },
+  {
+    "intent": "asking_for_direction",
+    "text": "What's the best way to get to the KRL station at Bogor from the Cikini area?"
+  },
+  {
+    "intent": "asking_for_direction",
+    "text": "How do I get to the Mangga Besar MRT station from Kota Station using the KRL?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Is there a tactile path leading to the entrance of the TransJakarta bus stop near the Grand Indonesia mall?"
+  },
+  {
+    "intent": "service_recommendation",
+    "text": "What's the most accessible way to get to the Pasar Minggu station from here, considering I'm using a wheelchair?"
+  },
+  {
+    "intent": "asking_for_direction",
+    "text": "Can you tell me the best way to reach the Senayan MRT station from the Blok M TransJakarta stop?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Are there any audio cues or announcements at the Sudirman MRT station to guide visually impaired passengers?"
+  },
+  {
+    "intent": "service_recommendation",
+    "text": "What's the most efficient route to reach the Gambir station from the National Monument, considering I'm visually impaired?"
+  },
+  {
+    "intent": "asking_for_direction",
+    "text": "I'm at the Dukuh Atas MRT station. How do I get to the Tanah Abang station using TransJakarta?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Are there any guide blocks or tactile markings on the sidewalk leading to the bus stop near the Plaza Semanggi?"
+  },
+  {
+    "intent": "service_recommendation",
+    "text": "What's the most accessible way to reach the Taman Mini Indonesia Indah station from the airport?"
+  },
+  {
+    "intent": "asking_for_direction",
+    "text": "Can you help me find the nearest TransJakarta stop to the National Library?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Are there any stairs or obstacles in front of the entrance to the KRL station at the Jatinegara station?"
+  },
+  {
+    "intent": "service_recommendation",
+    "text": "What's the best way to get to the Ancol Dreamland using public transport?"
+  },
+  {
+    "intent": "asking_for_direction",
+    "text": "I'm at the Monas station. How do I get to the Ragunan Zoo using the TransJakarta bus?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Is there a ramp or accessible entrance to the MRT station near the Thamrin City?"
+  },
+  {
+    "intent": "service_recommendation",
+    "text": "What's the most accessible route to reach the Gelora Bung Karno Stadium from here?"
+  },
+  {
+    "intent": "asking_for_direction",
+    "text": "Can you help me find the nearest TransJakarta bus stop from the Central Park Mall?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Are there any announcements in English at the MRT station near the Sarinah building?"
+  },
+  {
+    "intent": "service_recommendation",
+    "text": "What's the most convenient and accessible way to get to the Jakarta Cathedral?"
+  },
+  {
+    "intent": "asking_for_direction",
+    "text": "How do I get from the Lebak Bulus TransJakarta station to the Cilandak Town Square using public transport?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Are there any guide dogs allowed inside the MRT stations?"
+  },
+  {
+    "intent": "service_recommendation",
+    "text": "What's the best way to get to the Museum Nasional from the Gambir station?"
+  },
+  {
+    "intent": "asking_for_direction",
+    "text": "I'm at the Bundaran HI. How can I get to the Museum Bank Indonesia using TransJakarta?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Are there any tactile markings or audio cues at the bus stop near the Pasaraya Grande?"
+  },
+  {
+    "intent": "service_recommendation",
+    "text": "What's the most accessible route to get to the Jakarta Convention Center from the Sudirman MRT station?"
+  },
+  {
+    "intent": "asking_for_direction",
+    "text": "How do I get from the Blok M TransJakarta station to the Pondok Indah Mall using public transport?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Is there a lift or elevator to the platform at the KRL station near the Mangga Dua Square?"
+  },
+  {
+    "intent": "service_recommendation",
+    "text": "What's the most accessible way to get to the Senayan Sports Complex from here?"
+  },
+  {
+    "intent": "asking_for_direction",
+    "text": "I'm at the Dukuh Atas MRT station, how do I get to the Kota Station using the KRL?"
+  },
+  {
+    "intent": "asking_for_direction",
+    "text": "What's the best way to travel from Senayan to the Gambir Station using TransJakarta?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Is there a tactile path leading to the MRT entrance at the Blok M station?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Are there any steps or ramps at the entrance of the TransJakarta bus stop on Jalan Sudirman?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "I'm at the Tanah Abang station, can you tell me if there's a guide block leading to the ticket machine?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Is there a wheelchair accessible entrance to the KRL platform at the Manggarai Station?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Are there any obstacles or uneven surfaces in front of the TransJakarta bus stop on Jalan Thamrin?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Can you tell me if there's an audio announcement system at the MRT station?"
+  },
+  {
+    "intent": "service_recommendation",
+    "text": "What's the most accessible route to get to the Grand Indonesia Mall from the nearest TransJakarta bus stop?"
+  },
+  {
+    "intent": "service_recommendation",
+    "text": "Which TransJakarta bus line is the most accessible for someone with a visual impairment?"
+  },
+  {
+    "intent": "service_recommendation",
+    "text": "I'm looking for the most convenient route to get to the Monas from the MRT station, what would you recommend?"
+  },
+  {
+    "intent": "asking_for_direction",
+    "text": "Could you tell me the quickest way to get to the nearest KRL station from here using TransJakarta?"
+  },
+  {
+    "intent": "asking_for_direction",
+    "text": "I want to travel from the Sudirman Station to the Lebak Bulus Station using the MRT, how do I get there?"
+  },
+  {
+    "intent": "asking_for_direction",
+    "text": "What's the best TransJakarta route to get to the Museum Nasional from the nearest bus stop?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Are there any audible signals at the pedestrian crossing near the TransJakarta bus stop on Jalan Gatot Subroto?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Is there a tactile path leading to the KRL platform at the Jatinegara Station?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Are there any steps or ramps leading to the MRT station at the Bundaran HI?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Can you tell me if there's a wheelchair accessible entrance to the TransJakarta bus stop on Jalan Diponegoro?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Is there a guide block leading to the ticket machine at the KRL station in Duren Kalibata?"
+  },
+  {
+    "intent": "service_recommendation",
+    "text": "What's the best way to get to the National Gallery from the nearest MRT station, considering accessibility?"
+  },
+  {
+    "intent": "service_recommendation",
+    "text": "I'm looking for the most accessible route to get to the Ragunan Zoo from the nearest TransJakarta bus stop."
+  },
+  {
+    "intent": "service_recommendation",
+    "text": "What's the most convenient and accessible way to travel from the MRT station to the Thamrin City Shopping Mall?"
+  },
+  {
+    "intent": "asking_for_direction",
+    "text": "How can I get to the nearest TransJakarta bus stop from here, considering I have a visual impairment?"
+  },
+  {
+    "intent": "asking_for_direction",
+    "text": "I'm at the Manggarai Station, what's the best way to get to the Senayan Station using the KRL?"
+  },
+  {
+    "intent": "asking_for_direction",
+    "text": "What's the most accessible route to get to the Plaza Indonesia from the nearest TransJakarta bus stop?"
+  },
+  {
+    "intent": "asking_for_direction",
+    "text": "Can you tell me how to get to the nearest TransJakarta stop from the Grand Indonesia Mall?"
+  },
+  {
+    "intent": "asking_for_direction",
+    "text": "What's the best way to reach the Blok M station from the Senayan MRT station using TransJakarta?"
+  },
+  {
+    "intent": "asking_for_direction",
+    "text": "I'm at the Thamrin City mall, how do I get to the Tanah Abang station using the KRL?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Are there any steps or obstacles at the bus stop near the  Gelora Bung Karno Stadium?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "I'm at the Mangga Besar station. Are there any audio announcements for arriving trains?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Is there a guide block leading to the ticket machine at the Pasar Minggu station?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Are there any potholes or uneven surfaces on the sidewalk leading to the KRL station at Sudirman?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Is there a wheelchair accessible entrance at the TransJakarta stop near the National Monument?"
+  },
+  {
+    "intent": "service_recommendation",
+    "text": "What's the most accessible route to the Gambir station from the  Kota station, considering I'm using a wheelchair?"
+  },
+  {
+    "intent": "service_recommendation",
+    "text": "What's the best time to travel from the  Cikini station to the  Dukuh Atas station on the MRT to avoid crowds?"
+  },
+  {
+    "intent": "service_recommendation",
+    "text": "Which TransJakarta route is the most accessible for someone with limited vision, traveling from the  Senayan station to the  Kuningan station?"
+  },
+  {
+    "intent": "asking_for_direction",
+    "text": "How can I get to the nearest TransJakarta stop from the  FX Sudirman Mall?"
+  },
+  {
+    "intent": "asking_for_direction",
+    "text": "What's the best way to reach the  Tanah Abang station from the  Monas using the KRL?"
+  },
+  {
+    "intent": "asking_for_direction",
+    "text": "Can you tell me how to get to the  Mangga Besar station from the  Senayan MRT station using TransJakarta?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Is there an elevator at the KRL station at  Sudirman?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Are there any stairs or obstacles at the entrance of the  Tanah Abang MRT station?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Is there a tactile path leading to the ticket machine at the  Cikini station?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Are there any potholes on the sidewalk leading to the  Blok M MRT station?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Is there a guide block leading to the bus stop near the  National Monument?"
+  },
+  {
+    "intent": "service_recommendation",
+    "text": "What's the most accessible route to the  Dukuh Atas station from the  Cikini station, considering I'm using a cane?"
+  },
+  {
+    "intent": "service_recommendation",
+    "text": "What's the best time to travel from the  Blok M station to the  Tanah Abang station on the MRT to avoid rush hour?"
+  },
+  {
+    "intent": "service_recommendation",
+    "text": "Which TransJakarta route is the most accessible for someone with low vision, traveling from the  Mangga Besar station to the  Kota station?"
+  },
+  {
+    "intent": "asking_for_direction",
+    "text": "How can I get to the  Kota station from the  Grand Indonesia Mall using the KRL?"
+  },
+  {
+    "intent": "asking_for_direction",
+    "text": "What's the best way to reach the  Cikini station from the  Senayan MRT station using TransJakarta?"
+  },
+  {
+    "intent": "asking_for_direction",
+    "text": "Can you tell me how to get to the nearest TransJakarta stop from the  Thamrin City mall?"
+  },
+  {
+    "intent": "asking_for_direction",
+    "text": "I'm at the Blok M MRT station. How can I get to the Senayan station using the KRL?"
+  },
+  {
+    "intent": "asking_for_direction",
+    "text": "What's the best way to take the MRT to the Bundaran HI from the Sudirman station?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Is there a tactile path leading to the ticket machine at the Gambir station?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Are there any steps or ramps at the entrance to the Tanah Abang station?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Is there a guide block leading to the platform at the Dukuh Atas MRT station?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Can you tell me if there are any obstacles in front of me at this TransJakarta bus stop?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Is the sidewalk to the KRL station at Manggarai free of potholes?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Is there an audio announcement system at the Jatinegara station?"
+  },
+  {
+    "intent": "service_recommendation",
+    "text": "What's the most convenient way to travel from Kota to the Monas using public transport?"
+  },
+  {
+    "intent": "service_recommendation",
+    "text": "Can you recommend a route from the Gambir station to the Ragunan Zoo that's accessible for someone with a wheelchair?"
+  },
+  {
+    "intent": "service_recommendation",
+    "text": "What's the best public transport option for getting from the Grand Indonesia mall to the Ancol Dreamland during rush hour?"
+  },
+  {
+    "intent": "asking_for_direction",
+    "text": "I'd like to know how to get from the Kelapa Gading station to the Senayan station using the MRT."
+  },
+  {
+    "intent": "asking_for_direction",
+    "text": "Can you help me find the best way to get to the National Museum from the Tanah Abang station using TransJakarta?"
+  },
+  {
+    "intent": "asking_for_direction",
+    "text": "What's the fastest route from the Blok M station to the Cilandak station using the TransJakarta bus?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Is there an audio indicator at the platform to signal the arrival of the MRT train at the Dukuh Atas station?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Are there any steps or ramps at the entrance to the KRL station at Manggarai?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Is there a tactile path leading to the escalator at the Bundaran HI MRT station?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Can you describe the layout of the platform at the Jatinegara station?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Are there any audible cues to indicate the presence of obstacles at the Gambir station?"
+  },
+  {
+    "intent": "service_recommendation",
+    "text": "What's the most accessible route to get to the Jakarta Convention Center from the Sudirman station?"
+  },
+  {
+    "intent": "service_recommendation",
+    "text": "Can you suggest a route for getting from the Monas to the Ragunan Zoo using public transport that's suitable for a visually impaired person?"
+  },
+  {
+    "intent": "service_recommendation",
+    "text": "What's the best option for traveling from the Grand Indonesia mall to the Ancol Dreamland with a stroller?"
+  },
+  {
+    "intent": "asking_for_direction",
+    "text": "I'm looking for the most direct way to get to the Senayan station from the Kelapa Gading station using the MRT."
+  },
+  {
+    "intent": "asking_for_direction",
+    "text": "Can you tell me the best way to travel from the Tanah Abang station to the National Museum using TransJakarta?"
+  },
+  {
+    "intent": "asking_for_direction",
+    "text": "How do I get from the Blok M station to the Cilandak station using the TransJakarta bus?"
+  },
+  {
+    "intent": "asking_for_direction",
+    "text": "How can I get to the nearest TransJakarta bus stop from here?"
+  },
+  {
+    "intent": "asking_for_direction",
+    "text": "What's the best way to reach the Sudirman MRT station using public transport?"
+  },
+  {
+    "intent": "asking_for_direction",
+    "text": "Can you guide me to the nearest KRL station from my current location?"
+  },
+  {
+    "intent": "asking_for_direction",
+    "text": "I'm near the Senayan MRT station. How do I get to the Gelora Bung Karno Stadium using TransJakarta?"
+  },
+  {
+    "intent": "asking_for_direction",
+    "text": "Could you tell me the best route to reach the Kota Station from here using the KRL?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Is there a tactile path leading to the ticket machine at this TransJakarta bus stop?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "What's the best way to navigate the platform at the KRL station? Are there any guide blocks?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Are there any loud announcements near the TransJakarta bus stop? I find them difficult to hear."
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Is there a ramp or lift to access the MRT platform from the street level?"
+  },
+  {
+    "intent": "service_recommendation",
+    "text": "What's the most accessible route to reach the Blok M station from here?"
+  },
+  {
+    "intent": "service_recommendation",
+    "text": "Which public transport option would be the best for reaching the Tanah Abang station, considering accessibility?"
+  },
+  {
+    "intent": "service_recommendation",
+    "text": "Is there a direct TransJakarta bus route to the Gambir Station?"
+  },
+  {
+    "intent": "service_recommendation",
+    "text": "Can you recommend the most accessible route to reach the Central Park Mall from the nearest MRT station?"
+  },
+  {
+    "intent": "service_recommendation",
+    "text": "What's the best public transport option for travelling to the National Monument from here, keeping accessibility in mind?"
+  },
+  {
+    "intent": "asking_for_direction",
+    "text": "Could you tell me the best way to get to the Manggarai station from here, using the KRL?"
+  },
+  {
+    "intent": "asking_for_direction",
+    "text": "How can I reach the nearest TransJakarta stop from my current location?"
+  },
+  {
+    "intent": "asking_for_direction",
+    "text": "What's the best way to travel from here to the Senayan MRT station using public transport?"
+  },
+  {
+    "intent": "asking_for_direction",
+    "text": "Can you guide me to the closest KRL station from my current location?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Are there any steps or obstacles near the MRT entrance?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Are there any loud announcements near the TransJakarta bus stop? It's difficult for me to hear them."
+  },
+  {
+    "intent": "service_recommendation",
+    "text": "Can you recommend the most accessible route to reach the Blok M station from here?"
+  },
+  {
+    "intent": "asking_for_direction",
+    "text": "How can I get to the nearest Transjakarta bus stop from here, please?"
+  },
+  {
+    "intent": "asking_for_direction",
+    "text": "I'm at the Bundaran HI MRT station. What bus route should I take to reach the Taman Mini Indonesia Indah station?"
+  },
+  {
+    "intent": "asking_for_direction",
+    "text": "What's the fastest way to get to the Sudirman Station using the KRL?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Is there a tactile path leading to the MRT entrance at the Dukuh Atas Station?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Are there any stairs or ramps at the entrance of the Transjakarta shelter near the Senayan Station?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Can you tell me if there are any potholes or uneven surfaces on the sidewalk leading to the KRL station at Tanah Abang?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Are there any audible signals for pedestrians at the crosswalk near the Blok M Station?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Where are the guide blocks located leading to the ticket machine at the Mangga Dua Station?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Is the entrance to the MRT station at Lebak Bulus accessible for wheelchair users?"
+  },
+  {
+    "intent": "service_recommendation",
+    "text": "What's the most convenient way to travel from the Monas to the Gambir Station, considering accessibility?"
+  },
+  {
+    "intent": "service_recommendation",
+    "text": "Could you suggest the best route to get to the Kota Station from here, keeping in mind my limited mobility?"
+  },
+  {
+    "intent": "service_recommendation",
+    "text": "What is the most accessible public transport option for traveling to the Ancol Dreamland from the Central Jakarta area?"
+  },
+  {
+    "intent": "asking_for_direction",
+    "text": "Can you tell me how to get to the nearest Transjakarta stop from the National Museum?"
+  },
+  {
+    "intent": "asking_for_direction",
+    "text": "What is the best way to travel by KRL from the Jatinegara Station to the Bogor Station?"
+  },
+  {
+    "intent": "asking_for_direction",
+    "text": "I'm at the Cikini Station. How do I get to the Mangga Besar Station using Transjakarta?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Are there any audio announcements for arriving trains at the MRT station in Dukuh Atas?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Is there a ramp leading to the platform at the KRL station in Tanah Abang?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Can you tell me if there are any tactile paths leading to the Transjakarta shelter near the Senayan Station?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Is there a dedicated waiting area for wheelchair users at the MRT station in Lebak Bulus?"
+  },
+  {
+    "intent": "service_recommendation",
+    "text": "What is the most accessible route to get from the Grand Indonesia Mall to the Gambir Station?"
+  },
+  {
+    "intent": "service_recommendation",
+    "text": "Could you suggest the best public transport option for traveling to the Ragunan Zoo from the Blok M Station?"
+  },
+  {
+    "intent": "service_recommendation",
+    "text": "What is the most convenient way to travel from the National Monument to the TMII, considering accessibility?"
+  },
+  {
+    "intent": "asking_for_direction",
+    "text": "How do I get to the nearest KRL station from the Pasar Baru area?"
+  },
+  {
+    "intent": "asking_for_direction",
+    "text": "What is the best way to reach the Sudirman Station from the Kota Station using public transportation?"
+  },
+  {
+    "intent": "asking_for_direction",
+    "text": "I'm at the Blok M Station. How can I get to the nearest Transjakarta bus stop going to the Ragunan Zoo?"
+  },
+  {
+    "intent": "asking_for_direction",
+    "text": "How can I get to the nearest TransJakarta stop from here?"
+  },
+  {
+    "intent": "asking_for_direction",
+    "text": "What's the best way to reach the Monas MRT station from the Grand Indonesia Mall?"
+  },
+  {
+    "intent": "asking_for_direction",
+    "text": "Can you tell me how to get to the Mangga Dua KRL station using public transport?"
+  },
+  {
+    "intent": "asking_for_direction",
+    "text": "I need directions to the nearest TransJakarta bus stop, please."
+  },
+  {
+    "intent": "asking_for_direction",
+    "text": "How do I get to the Kota Tua station using the MRT?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Is there a tactile path leading to the MRT entrance?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Are there any steps or obstacles near the TransJakarta bus stop?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Can you tell me if there are any potholes or uneven surfaces on the sidewalk?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Is the ticket machine accessible for someone using a wheelchair?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "What's the layout of the KRL platform at the Sudirman station?"
+  },
+  {
+    "intent": "service_recommendation",
+    "text": "What's the most accessible route to the Gambir station?"
+  },
+  {
+    "intent": "service_recommendation",
+    "text": "Which TransJakarta route is the most accessible for someone with limited mobility?"
+  },
+  {
+    "intent": "service_recommendation",
+    "text": "Can you recommend the best way to travel from the Blok M station to the Ragunan Zoo?"
+  },
+  {
+    "intent": "service_recommendation",
+    "text": "What's the easiest way to reach the Senayan MRT station?"
+  },
+  {
+    "intent": "service_recommendation",
+    "text": "Can you suggest the most accessible transport option to the National Museum?"
+  },
+  {
+    "intent": "asking_for_direction",
+    "text": "I'd like to go to the nearest KRL station from here. How do I get there?"
+  },
+  {
+    "intent": "asking_for_direction",
+    "text": "What is the quickest way to reach the Tanah Abang station via TransJakarta?"
+  },
+  {
+    "intent": "asking_for_direction",
+    "text": "How do I get to the Dukuh Atas station using the MRT?"
+  },
+  {
+    "intent": "asking_for_direction",
+    "text": "Could you please tell me how to get to the nearest KRL station from here?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Are there any audible cues or announcements at the TransJakarta bus stop?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Is there a ramp or lift available at the MRT entrance?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Are there any guide blocks leading to the ticket machine?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Is the sidewalk in front of the KRL station smooth and accessible?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "What is the layout of the TransJakarta bus stop?"
+  },
+  {
+    "intent": "service_recommendation",
+    "text": "What's the best way to get from the Pasar Minggu station to the Museum Nasional?"
+  },
+  {
+    "intent": "service_recommendation",
+    "text": "Can you suggest an accessible route from the Senayan station to the Gelora Bung Karno stadium?"
+  },
+  {
+    "intent": "service_recommendation",
+    "text": "Which transport option is the most suitable for someone with visual impairments to travel from the Blok M station to the Ragunan Zoo?"
+  },
+  {
+    "intent": "service_recommendation",
+    "text": "What's the most accessible way to get to the National Monument from here?"
+  },
+  {
+    "intent": "service_recommendation",
+    "text": "Can you recommend the best route for someone who's visually impaired to travel from the Tanah Abang station to the Grand Indonesia Mall?"
+  },
+  {
+    "intent": "asking_for_direction",
+    "text": "I'm at the Blok M MRT station. What bus route should I take to get to the Senayan station?"
+  },
+  {
+    "intent": "asking_for_direction",
+    "text": "Hey, how do I get to the Gambir station using the KRL Commuter Line?"
+  },
+  {
+    "intent": "asking_for_direction",
+    "text": "What's the best way to reach the Tanah Abang market from here using public transport?"
+  },
+  {
+    "intent": "asking_for_direction",
+    "text": "I need to go to the National Museum, is there a TransJakarta route that goes there?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Are there any steps or obstacles in front of me at the bus stop?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Can you tell me if there are any potholes in this sidewalk?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Is there a ramp leading to the platform at this station?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Where can I find the audio announcements at the station?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Is there a tactile guide block leading to the ticket machine?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Can you describe the layout of the platform, are there any benches or shelters?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "I can't find the entrance to the station, can you help me?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Is there a clear path to the gate at this station?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Are there any loud noises or announcements at the station?"
+  },
+  {
+    "intent": "service_recommendation",
+    "text": "What's the most accessible route to get to the Manggarai station?"
+  },
+  {
+    "intent": "service_recommendation",
+    "text": "Is there an accessible TransJakarta bus to the Bundaran HI?"
+  },
+  {
+    "intent": "service_recommendation",
+    "text": "What's the best public transport option for going to the Ragunan Zoo?"
+  },
+  {
+    "intent": "service_recommendation",
+    "text": "Can you recommend a route to the Monas that's easy to navigate?"
+  },
+  {
+    "intent": "service_recommendation",
+    "text": "What are the accessibility features available at the Jatinegara station?"
+  },
+  {
+    "intent": "service_recommendation",
+    "text": "Which TransJakarta route has the most wheelchair accessible stops?"
+  },
+  {
+    "intent": "service_recommendation",
+    "text": "I need to travel from Cikini station to Pasar Minggu, what's the best option?"
+  },
+  {
+    "intent": "service_recommendation",
+    "text": "Is there a bus route with audio announcements for visually impaired passengers?"
+  },
+  {
+    "intent": "service_recommendation",
+    "text": "Can you suggest a route to the Taman Mini Indonesia Indah that's easy for me to use?"
+  },
+  {
+    "intent": "service_recommendation",
+    "text": "What are the different transportation options available for going to the Jakarta Cathedral?"
+  },
+  {
+    "intent": "service_recommendation",
+    "text": "Is there a special service or assistance for visually impaired travelers at the airport?"
+  },
+  {
+    "intent": "asking_for_direction",
+    "text": "Can you tell me how to get to the Senayan MRT station from the Grand Indonesia Mall using TransJakarta?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Is there a tactile path leading to the entrance of the KRL station at Manggarai?"
+  },
+  {
+    "intent": "service_recommendation",
+    "text": "What's the best way to reach the Blok M bus stop from the Setiabudi One building, considering accessibility?"
+  },
+  {
+    "intent": "asking_for_direction",
+    "text": "I'm near the Sarinah building, how do I take the TransJakarta bus to reach the Monas?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Are there any ramps or stairs at the entrance of the MRT station at Dukuh Atas?"
+  },
+  {
+    "intent": "service_recommendation",
+    "text": "Which TransJakarta line would be the most accessible for someone with a wheelchair to travel from Kota to Sudirman?"
+  },
+  {
+    "intent": "asking_for_direction",
+    "text": "Could you guide me to the nearest KRL station from the Thamrin City Mall?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Is there a guide block leading to the ticket machine at the MRT station at Lebak Bulus?"
+  },
+  {
+    "intent": "service_recommendation",
+    "text": "What's the fastest and most accessible way to travel from the Bundaran HI to the ITC Kuningan by public transport?"
+  },
+  {
+    "intent": "asking_for_direction",
+    "text": "How can I reach the Pasar Minggu bus stop from the Cilandak Town Square using TransJakarta?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Are there any audio announcements or sound cues for visually impaired people at the TransJakarta bus stop in front of the Plaza Semanggi?"
+  },
+  {
+    "intent": "service_recommendation",
+    "text": "Is there an accessible route from the Ragunan Zoo to the MRT station at Lebak Bulus?"
+  },
+  {
+    "intent": "asking_for_direction",
+    "text": "Can you tell me the best way to reach the National Museum from the Gambir Station by MRT?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Are there any obstacles or hazards on the sidewalk leading to the MRT station at Dukuh Atas?"
+  },
+  {
+    "intent": "service_recommendation",
+    "text": "I want to travel from the Sudirman area to the Jakarta Convention Center, what's the most accessible route using public transport?"
+  },
+  {
+    "intent": "asking_for_direction",
+    "text": "How do I get to the Manggarai Station from the Gelora Bung Karno Stadium using TransJakarta?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Are there any tactile paths or guide blocks to help me navigate the KRL station at Tanah Abang?"
+  },
+  {
+    "intent": "service_recommendation",
+    "text": "What's the best option for a visually impaired person to travel from the Jatinegara Station to the Kota Station?"
+  },
+  {
+    "intent": "asking_for_direction",
+    "text": "Could you tell me how to reach the Pasar Baru Station from the Merdeka Palace using TransJakarta?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Are there any audio announcements or sound cues for visually impaired people at the TransJakarta bus stop in front of the Bank Indonesia?"
+  },
+  {
+    "intent": "service_recommendation",
+    "text": "What's the most accessible route to travel from the Mall of Indonesia to the Ancol Dreamland?"
+  },
+  {
+    "intent": "asking_for_direction",
+    "text": "Can you guide me on how to reach the Stasiun Juanda from the Museum Nasional using the MRT?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Is there a tactile path leading to the entrance of the MRT station at Bundaran HI?"
+  },
+  {
+    "intent": "service_recommendation",
+    "text": "What's the best way to travel from the Taman Mini Indonesia Indah to the Ragunan Zoo, taking into account accessibility?"
+  },
+  {
+    "intent": "asking_for_direction",
+    "text": "How do I get to the Blok M Station from the Pondok Indah Mall using TransJakarta?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Are there any ramps or stairs at the entrance of the KRL station at Jatinegara?"
+  },
+  {
+    "intent": "service_recommendation",
+    "text": "What's the most accessible route to travel from the National Library to the Taman Ismail Marzuki?"
+  },
+  {
+    "intent": "asking_for_direction",
+    "text": "Can you tell me how to get to the Gambir station using the KRL from Kelapa Gading?"
+  },
+  {
+    "intent": "asking_for_direction",
+    "text": "I'm at the Blok M station. How do I get to the Senayan station using TransJakarta?"
+  },
+  {
+    "intent": "asking_for_direction",
+    "text": "What's the best way to get to the Kota station from here using the MRT?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Is there a tactile path leading to the MRT entrance at the Dukuh Atas station?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Are there any stairs or ramps near the TransJakarta bus stop at the Bundaran HI?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Is the sidewalk in front of the KRL station at Tanah Abang clear of any obstacles?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Can you describe the layout of the MRT station at Lebak Bulus?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Is there a guide block leading to the ticket machine at the MRT station at Cipete?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Are there any audio announcements about the arrival of trains at the KRL station at Manggarai?"
+  },
+  {
+    "intent": "service_recommendation",
+    "text": "Is there a direct TransJakarta route from the Blok M station to the Senayan station?"
+  },
+  {
+    "intent": "service_recommendation",
+    "text": "What's the best time of day to travel from the Dukuh Atas station to the Lebak Bulus station on the MRT?"
+  },
+  {
+    "intent": "asking_for_direction",
+    "text": "How do I get from the MRT station at Cipete to the TransJakarta bus stop at the Blok M station?"
+  },
+  {
+    "intent": "asking_for_direction",
+    "text": "What's the easiest way to get from the KRL station at Manggarai to the Senayan station using TransJakarta?"
+  },
+  {
+    "intent": "asking_for_direction",
+    "text": "Can you tell me the route to the Gambir station from the Tanah Abang station using the MRT?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Is there an elevator at the KRL station at Depok?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Are there any audio cues for the platform at the MRT station at Lebak Bulus?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Is the sidewalk in front of the TransJakarta bus stop at the Bundaran HI clear of potholes?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Are there any stairs at the entrance to the KRL station at Bogor?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "What's the layout of the MRT station at Dukuh Atas like?"
+  },
+  {
+    "intent": "service_recommendation",
+    "text": "What's the best time of day to travel from the Tanah Abang station to the Blok M station using TransJakarta?"
+  },
+  {
+    "intent": "service_recommendation",
+    "text": "Is there a TransJakarta bus route that goes directly to the KRL station at Manggarai?"
+  },
+  {
+    "intent": "service_recommendation",
+    "text": "What's the most accessible route to the MRT station at Dukuh Atas from the KRL station at Gambir?"
+  },
+  {
+    "intent": "asking_for_direction",
+    "text": "Could you tell me how to get to the MRT station at Cipete from the TransJakarta bus stop at the Blok M station?"
+  },
+  {
+    "intent": "asking_for_direction",
+    "text": "What's the best way to get from the KRL station at Bogor to the MRT station at Dukuh Atas?"
+  },
+  {
+    "intent": "asking_for_direction",
+    "text": "How do I get to the TransJakarta bus stop at the Bundaran HI from the KRL station at Depok?"
+  },
+  {
+    "intent": "asking_for_direction",
+    "text": "Can you tell me how to get to the nearest TransJakarta bus stop from the Grand Indonesia Mall?"
+  },
+  {
+    "intent": "asking_for_direction",
+    "text": "What's the best way to reach the Blok M MRT station from the Senayan Library using public transport?"
+  },
+  {
+    "intent": "asking_for_direction",
+    "text": "I'm at the Pasar Minggu terminal, how can I get to the Gambir Station via KRL?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Are there any steps or ramps at the bus stop near the National Monument (Monas)?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Can you describe the area around the ticket machine at the Manggarai Station? Are there any obstacles?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "I'm at the entrance of the Sudirman Station, what are the audio cues for navigating the platform?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Is there a guide block leading to the escalator at the Dukuh Atas Station?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "I'm waiting for a bus at the Halte CSW, are there any benches or shelters nearby?"
+  },
+  {
+    "intent": "service_recommendation",
+    "text": "What is the most accessible way to get to the Kota Station from the Thamrin City Mall?"
+  },
+  {
+    "intent": "service_recommendation",
+    "text": "Which TransJakarta route is best for getting to the Ancol Dreamland from the Kelapa Gading area?"
+  },
+  {
+    "intent": "service_recommendation",
+    "text": "Can you suggest the most accessible route for traveling from the ITC Roxy Mas to the Gelora Bung Karno Stadium?"
+  },
+  {
+    "intent": "asking_for_direction",
+    "text": "How do I get to the nearest TransJakarta bus stop from the Plaza Senayan?"
+  },
+  {
+    "intent": "asking_for_direction",
+    "text": "What is the most efficient way to reach the Tanah Abang Station from the Central Park Mall using public transport?"
+  },
+  {
+    "intent": "asking_for_direction",
+    "text": "Could you tell me how to get from the Ragunan Zoo to the Jatinegara Station using the KRL?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Are there any steps or ramps at the bus stop near the National Museum?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Is there a tactile path leading to the entrance of the MRT station at the Lebak Bulus terminal?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Can you describe the area around the ticket machine at the Juanda Station? Are there any obstacles?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "I'm at the entrance of the Cikini Station, what are the audio cues for navigating the platform?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Is there a guide block leading to the escalator at the Mangga Besar Station?"
+  },
+  {
+    "intent": "service_recommendation",
+    "text": "What's the most accessible route to the Museum Nasional from the Sarinah building?"
+  },
+  {
+    "intent": "service_recommendation",
+    "text": "Which TransJakarta route is best for getting to the Taman Mini Indonesia Indah from the Kuningan area?"
+  },
+  {
+    "intent": "service_recommendation",
+    "text": "Can you suggest the most accessible route for traveling from the Plaza Indonesia to the Senayan National Stadium?"
+  },
+  {
+    "intent": "asking_for_direction",
+    "text": "How do I get to the nearest TransJakarta bus stop from the Pacific Place Mall?"
+  },
+  {
+    "intent": "asking_for_direction",
+    "text": "What is the most efficient way to reach the Dukuh Atas Station from the Thamrin City Mall using public transport?"
+  },
+  {
+    "intent": "asking_for_direction",
+    "text": "Could you tell me how to get from the TMII (Taman Mini Indonesia Indah) to the Bogor Station using the KRL?"
+  },
+  {
+    "intent": "asking_for_direction",
+    "text": "Can you tell me how to get to the Gambir station from the Grand Indonesia Mall using the TransJakarta bus?"
+  },
+  {
+    "intent": "asking_for_direction",
+    "text": "I'm at the Blok M station, how do I get to the Senayan MRT station using the KRL?"
+  },
+  {
+    "intent": "asking_for_direction",
+    "text": "What's the best way to reach the Kota station from the Pasar Baru area using public transportation?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Are there any steps or obstacles near the bus stop at the Blok M station?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Can you tell me if there are any potholes or uneven surfaces on the sidewalk near the TransJakarta bus stop at the Dukuh Atas station?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Where is the nearest guide block leading to the ticket machine at the Manggarai station?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Are there any audible announcements or audio cues at the Tanah Abang station?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "What is the layout of the platform at the Sudirman station? Are there any benches or seating areas?"
+  },
+  {
+    "intent": "service_recommendation",
+    "text": "What is the most accessible route to the Thamrin City mall from the Senayan station, considering I'm using a wheelchair?"
+  },
+  {
+    "intent": "service_recommendation",
+    "text": "What is the best way to get from the Halim Perdanakusuma airport to the Monas using public transportation, taking into account my visual impairment?"
+  },
+  {
+    "intent": "service_recommendation",
+    "text": "I'm looking for the most accessible route to the National Museum from the Gambir station. What public transportation options should I consider?"
+  },
+  {
+    "intent": "asking_for_direction",
+    "text": "How can I get to the Tanah Abang station from the Blok M station using the TransJakarta bus? I need to know the most accessible route."
+  },
+  {
+    "intent": "asking_for_direction",
+    "text": "I'm at the Dukuh Atas station, how do I get to the Ragunan Zoo using the MRT and TransJakarta? Please consider my needs as a visually impaired person."
+  },
+  {
+    "intent": "asking_for_direction",
+    "text": "What is the best way to reach the Pasar Minggu station from the Kelapa Gading area using public transportation?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Are there any audio cues or announcements for the platform at the Manggarai station?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Is there a tactile path leading to the entrance of the MRT station at the Lebak Bulus station?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Is there a ramp or stairs near the bus stop at the Monas?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Where can I find the nearest guide block at the Bundaran HI station?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Are there any tactile markings on the sidewalk near the TransJakarta bus stop at the Sudirman station?"
+  },
+  {
+    "intent": "service_recommendation",
+    "text": "What is the most accessible route to the Kota Tua area from the Gambir station, keeping in mind my visual impairment?"
+  },
+  {
+    "intent": "service_recommendation",
+    "text": "What is the best way to get from the Thamrin City mall to the Museum Nasional using public transportation? Please suggest the most accessible option."
+  },
+  {
+    "intent": "service_recommendation",
+    "text": "I'm looking for the most accessible route to the Grand Indonesia mall from the Dukuh Atas station. What public transportation options should I consider?"
+  },
+  {
+    "intent": "asking_for_direction",
+    "text": "How can I get to the Sudirman station from the Blok M station using the TransJakarta bus? I need to know the most accessible route."
+  },
+  {
+    "intent": "asking_for_direction",
+    "text": "I'm at the Lebak Bulus station, how do I get to the Taman Mini Indonesia Indah using the MRT and TransJakarta? Please consider my needs as a visually impaired person."
+  },
+  {
+    "intent": "asking_for_direction",
+    "text": "What is the best way to reach the Senayan station from the Kelapa Gading area using public transportation?"
+  },
+  {
+    "intent": "asking_for_direction",
+    "text": "What's the best way to reach the Blok M bus stop from the Dharmawangsa area using the KRL?"
+  },
+  {
+    "intent": "asking_for_direction",
+    "text": "I'm near the Gelora Bung Karno Stadium, how do I take the TransJakarta to the Dukuh Atas station?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Are there any steps or ramps at the entrance of the Tanah Abang MRT station?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Is there a tactile path leading to the ticket machines at the Manggarai station?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Can you tell me if there are any potholes or uneven surfaces on the sidewalk near the Halim Perdanakusuma station?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Is there a guide block leading to the escalator at the Jatinegara station?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "What kind of sound does the MRT train make when it arrives at the station?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "I am near the Sudirman bus stop, are there any obstacles like benches or trees in front of me?"
+  },
+  {
+    "intent": "service_recommendation",
+    "text": "What is the most accessible route from the Plaza Semanggi to the Gambir station, considering I use a wheelchair?"
+  },
+  {
+    "intent": "service_recommendation",
+    "text": "What's the best way to reach the Monas from the Kota station, keeping in mind I have visual impairments?"
+  },
+  {
+    "intent": "service_recommendation",
+    "text": "Is there a TransJakarta bus route that is particularly accessible for blind passengers from the Thamrin City Mall to the Museum Nasional?"
+  },
+  {
+    "intent": "asking_for_direction",
+    "text": "How can I get to the  Pancoran station using TransJakarta from the Kuningan City area?"
+  },
+  {
+    "intent": "asking_for_direction",
+    "text": "I'm at the Kelapa Gading station, how do I take the KRL to the Jakarta Kota station?"
+  },
+  {
+    "intent": "asking_for_direction",
+    "text": "Could you please guide me on how to get to the  Cililitan bus stop from the Kalibata area using TransJakarta?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Is there a tactile path leading to the gate at the  Stasiun Juanda?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "What are the audio cues that indicate the arrival of a train at the  Stasiun Pasar Minggu?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Are there any steps or ramps at the entrance of the  Stasiun Gondangdia?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Is there a guide block leading to the ticket machines at the  Stasiun Tebet?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Are there any obstacles or hazards on the sidewalk near the  Stasiun Manggarai?"
+  },
+  {
+    "intent": "service_recommendation",
+    "text": "What is the most accessible route from the  Stasiun Senen to the  Stasiun Sudirman, taking into account I have a walking cane?"
+  },
+  {
+    "intent": "service_recommendation",
+    "text": "What's the most convenient and accessible way to travel from the  Stasiun Duri to the  Stasiun Bogor?"
+  },
+  {
+    "intent": "service_recommendation",
+    "text": "Is there a TransJakarta bus route that is accessible for visually impaired passengers from the  Stasiun  Tanah Abang to the  Stasiun  Cikini?"
+  },
+  {
+    "intent": "asking_for_direction",
+    "text": "How can I get to the  Stasiun  Cawang using TransJakarta from the  Stasiun  Kampung Bandan?"
+  },
+  {
+    "intent": "asking_for_direction",
+    "text": "I'm at the  Stasiun  Bekasi, how do I take the KRL to the  Stasiun  Palmerah?"
+  },
+  {
+    "intent": "asking_for_direction",
+    "text": "Could you please guide me on how to get to the  Stasiun  Depok from the  Stasiun  Rawa Buntu using KRL?"
+  },
+  {
+    "intent": "asking_for_direction",
+    "text": "Can you tell me the best way to get to the Gambir Station from the Monas using TransJakarta?"
+  },
+  {
+    "intent": "asking_for_direction",
+    "text": "What's the quickest TransJakarta route from the Kota Station to the Ragunan Zoo?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Are there any steps or ramps at the entrance of the MRT station at Dukuh Atas?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Is there a tactile path leading to the ticket machine at the KRL station in Tanah Abang?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Can you tell me if there are any obstacles or uneven surfaces on the sidewalk near the TransJakarta bus stop in Manggarai?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Are there any audio announcements at the MRT station at Lebak Bulus?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "What is the layout of the platform at the KRL station in Sudirman, are there any benches or seats?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Is there a guide block leading to the entrance of the TransJakarta bus stop in Cawang?"
+  },
+  {
+    "intent": "service_recommendation",
+    "text": "What is the most accessible way to travel from the Central Park Mall to the Grand Indonesia Mall using public transport?"
+  },
+  {
+    "intent": "service_recommendation",
+    "text": "What is the best route to take from the Pondok Indah Mall to the Taman Mini Indonesia Indah using TransJakarta and the MRT?"
+  },
+  {
+    "intent": "service_recommendation",
+    "text": "What is the most accessible option to get from the Pasar Minggu station to the Senayan City Mall?"
+  },
+  {
+    "intent": "asking_for_direction",
+    "text": "How do I get from the Thamrin City Mall to the Gelora Bung Karno Stadium using public transportation?"
+  },
+  {
+    "intent": "asking_for_direction",
+    "text": "What is the best way to get to the Ragunan Zoo from the Blok M station using TransJakarta?"
+  },
+  {
+    "intent": "asking_for_direction",
+    "text": "I want to go from the Kota Station to the Museum Nasional, can you tell me the easiest route using the KRL?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Are there any tactile paving blocks leading to the exit of the MRT station in Bundaran HI?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Is there a ramp or lift available at the entrance of the TransJakarta bus stop in Kuningan?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Can you tell me if there are any audio signals at the KRL station in Depok?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Are there any benches or seating areas on the platform at the TransJakarta bus stop in Kalideres?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Is there a guide block leading to the ticket machine at the MRT station in Lebak Bulus?"
+  },
+  {
+    "intent": "service_recommendation",
+    "text": "What is the most accessible route to get from the Plaza Senayan to the National Monument (Monas)?"
+  },
+  {
+    "intent": "service_recommendation",
+    "text": "What is the best way to travel from the Taman Mini Indonesia Indah to the Ancol Dreamland using public transportation?"
+  },
+  {
+    "intent": "service_recommendation",
+    "text": "Which is the most accessible option for getting from the Mall of Indonesia to the Kota Tua?"
+  },
+  {
+    "intent": "asking_for_direction",
+    "text": "How can I get to the National Museum from the Grand Indonesia Mall using the TransJakarta bus?"
+  },
+  {
+    "intent": "asking_for_direction",
+    "text": "What is the best way to get to the Ragunan Zoo from the Pasar Minggu station using the KRL?"
+  },
+  {
+    "intent": "asking_for_direction",
+    "text": "Can you tell me the route to get from the Blok M station to the Senayan City Mall using the MRT?"
+  },
+  {
+    "intent": "asking_for_direction",
+    "text": "How do I get to the nearest TransJakarta bus stop from the Grand Indonesia Mall?"
+  },
+  {
+    "intent": "asking_for_direction",
+    "text": "Can you tell me the best way to reach the Blok M MRT station from the Senayan National Stadium using public transportation?"
+  },
+  {
+    "intent": "asking_for_direction",
+    "text": "I'm at the Dukuh Atas station. What's the fastest way to get to the Kota Station using KRL?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Are there any steps or ramps leading to the MRT entrance at the Bundaran HI station?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Is there a tactile path leading to the ticket machine at the Manggarai station?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "I'm near the TransJakarta shelter on Jalan Sudirman. Are there any obstacles like potholes or uneven pavement in front of me?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Is there a guide block leading to the exit of the KRL station at the Tanah Abang station?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Can you tell me where the closest audio announcement system is located at the Jatinegara station?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Are there any benches or seating areas near the bus stop on Jalan Thamrin?"
+  },
+  {
+    "intent": "service_recommendation",
+    "text": "What is the most accessible way to get to the Pasar Minggu station from the Central Park Mall?"
+  },
+  {
+    "intent": "service_recommendation",
+    "text": "Can you recommend the best public transportation route to reach the Gambir station from the Plaza Indonesia Mall?"
+  },
+  {
+    "intent": "service_recommendation",
+    "text": "What's the easiest way to get to the Monas area from the Kelapa Gading area using public transportation?"
+  },
+  {
+    "intent": "asking_for_direction",
+    "text": "I need directions to the nearest TransJakarta bus stop from the National Museum in Jakarta. Can you help?"
+  },
+  {
+    "intent": "asking_for_direction",
+    "text": "How can I get to the Senayan MRT station from the Gelora Bung Karno Stadium using the KRL?"
+  },
+  {
+    "intent": "asking_for_direction",
+    "text": "What's the best way to reach the Sudirman station from the Thamrin City Mall using public transportation?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Is there a wheelchair-accessible entrance at the KRL station in Jakarta Kota?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Are there any ramps or elevators at the MRT station near the Sarinah building?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Is there a clear tactile path leading to the ticket vending machine at the Manggarai Station?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "I'm near the TransJakarta shelter on Jalan Gatot Subroto. Are there any obstructions like lamp posts in my way?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Can you tell me where the nearest audio announcements are located at the Dukuh Atas station?"
+  },
+  {
+    "intent": "service_recommendation",
+    "text": "What's the most accessible route to the Jakarta Convention Center from the Kota Tua area?"
+  },
+  {
+    "intent": "service_recommendation",
+    "text": "Can you recommend the best public transportation options for a visually impaired person traveling from the Mall of Indonesia to the Ragunan Zoo?"
+  },
+  {
+    "intent": "service_recommendation",
+    "text": "What is the easiest way to get to the Istiqlal Mosque from the Plaza Semanggi area using public transportation?"
+  },
+  {
+    "intent": "asking_for_direction",
+    "text": "I'm at the Blok M station. How do I get to the nearest TransJakarta bus stop to go to the Museum Nasional?"
+  },
+  {
+    "intent": "asking_for_direction",
+    "text": "Can you tell me the best way to reach the Tanah Abang station from the National Library using public transportation?"
+  },
+  {
+    "intent": "asking_for_direction",
+    "text": "I'm at the Dukuh Atas station. What's the fastest way to get to the Sudirman station using the MRT?"
+  },
+  {
+    "intent": "asking_for_direction",
+    "text": "I'm at the Blok M MRT station, how do I get to the Gelora Bung Karno Stadium using public transportation?"
+  },
+  {
+    "intent": "asking_for_direction",
+    "text": "What's the best way to reach the Senayan Station from here by KRL?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Are there any steps or obstacles in front of the MRT entrance at Dukuh Atas Station?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Is there a tactile path leading to the TransJakarta bus stop on Jalan Sudirman?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "I'm at the bus stop, are there any ramps or accessible pathways?"
+  },
+  {
+    "intent": "service_recommendation",
+    "text": "Which route is most accessible for someone with a wheelchair to get to the Tanah Abang Station?"
+  },
+  {
+    "intent": "service_recommendation",
+    "text": "What's the most convenient way to travel from the airport to the Gambir Station considering accessibility?"
+  },
+  {
+    "intent": "service_recommendation",
+    "text": "What's the best public transportation option to get to the Kota Station from here, keeping in mind accessibility?"
+  },
+  {
+    "intent": "asking_for_direction",
+    "text": "What's the best route to take from here to the Monas using TransJakarta?"
+  },
+  {
+    "intent": "asking_for_direction",
+    "text": "Can you help me find the way to the nearest MRT station from the Thamrin City Mall?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Is there a tactile path leading to the ticket machine at the Manggarai Station?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Are there any audio announcements at the bus stop, like for approaching buses?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Is there a clear visual contrast between the platform and the train doors at the MRT station?"
+  },
+  {
+    "intent": "service_recommendation",
+    "text": "What's the most accessible way to get to the Jakarta Convention Center from here?"
+  },
+  {
+    "intent": "service_recommendation",
+    "text": "What's the easiest way to reach the Museum Nasional using public transport for someone with low vision?"
+  },
+  {
+    "intent": "service_recommendation",
+    "text": "Which route should I take to get to the Manggarai Station during rush hour, considering accessibility?"
+  },
+  {
+    "intent": "asking_for_direction",
+    "text": "How do I get to the nearest TransJakarta bus stop from the Sarinah building?"
+  },
+  {
+    "intent": "asking_for_direction",
+    "text": "What's the quickest way to reach the National Museum from the Pasar Baru Station using public transport?"
+  },
+  {
+    "intent": "asking_for_direction",
+    "text": "Can you help me find the best route to get to the nearest KRL station from the Plaza Indonesia Mall?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Are there any ramps or accessible paths leading to the platform at the MRT station?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Are there any designated areas for visually impaired passengers at the bus stop?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Is there a clear indication of where the tactile path begins at the KRL station?"
+  },
+  {
+    "intent": "service_recommendation",
+    "text": "What's the most accessible route to get to the Ragunan Zoo from here?"
+  },
+  {
+    "intent": "service_recommendation",
+    "text": "Can you recommend a safe and accessible route for getting to the Ancol Dreamland from here?"
+  },
+  {
+    "intent": "asking_for_direction",
+    "text": "How can I get to the Gambir Station using the KRL from the Senayan Station?"
+  },
+  {
+    "intent": "asking_for_direction",
+    "text": "I need directions to the nearest TransJakarta bus stop from here. I'm near the Monas."
+  },
+  {
+    "intent": "asking_for_direction",
+    "text": "Can you tell me the best way to get to the Blok M Station from the Ragunan Zoo using the TransJakarta?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Are there any steps or obstacles in front of the MRT entrance at the Dukuh Atas Station?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "I'm at the Manggarai Station. Can you tell me if there are any audio cues to indicate the platform for the KRL to Bogor?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Is there a ramp or an elevator for wheelchair access at the MRT station in Lebak Bulus?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "I'm standing at the bus stop near the Sarinah building. What are the sounds I should listen for to know when the TransJakarta bus is arriving?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Is there a clear tactile path leading to the escalator at the MRT station in Bundaran HI?"
+  },
+  {
+    "intent": "service_recommendation",
+    "text": "What's the most accessible route to get from the Thamrin City Mall to the Kota Station, considering I use a wheelchair?"
+  },
+  {
+    "intent": "service_recommendation",
+    "text": "Could you suggest the best way to travel from the National Museum to the Sudirman Station, taking into account my visual impairment?"
+  },
+  {
+    "intent": "service_recommendation",
+    "text": "What is the most convenient and accessible way to reach the Senayan Station from the Plaza Semanggi, especially for someone with low vision?"
+  },
+  {
+    "intent": "asking_for_direction",
+    "text": "Can you give me directions to the nearest TransJakarta bus stop from here? I'm near the National Monument."
+  },
+  {
+    "intent": "asking_for_direction",
+    "text": "What is the best route to get to the Blok M Station from the Ragunan Zoo via the TransJakarta?"
+  },
+  {
+    "intent": "asking_for_direction",
+    "text": "How do I get to the Gambir Station using the KRL from the Senayan Station?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Are there any guide blocks leading to the ticket machine at the Tanah Abang Station?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Is there a tactile path leading to the escalator at the MRT station in Bundaran HI?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "I'm at the Manggarai Station. Are there any audio cues to indicate the platform for the KRL to Bogor?"
+  },
+  {
+    "intent": "asking_for_direction",
+    "text": "Can you guide me to the nearest TransJakarta bus stop from here? I'm near the National Monument."
+  },
+  {
+    "intent": "asking_for_direction",
+    "text": "What is the best route to get to the Blok M Station from the Ragunan Zoo using the TransJakarta?"
+  },
+  {
+    "intent": "asking_for_direction",
+    "text": "Can you tell me the best way to reach the MRT station at Dukuh Atas using TransJakarta?"
+  },
+  {
+    "intent": "asking_for_direction",
+    "text": "What's the quickest route to the KRL station at Tanah Abang from the Blok M Plaza?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Are there any steps or obstacles near the entrance to the MRT station at Bundaran HI?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Is there a tactile path leading to the ticket machine at the TransJakarta bus stop?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Can you describe the layout of the KRL platform at Manggarai station?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Are there any guide blocks leading to the escalator at the MRT station?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Is there a ramp or elevator available to access the TransJakarta bus?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Are there any audio announcements at the KRL platform?"
+  },
+  {
+    "intent": "service_recommendation",
+    "text": "What is the most accessible route to the KRL station at Gambir from the Grand Indonesia Mall?"
+  },
+  {
+    "intent": "service_recommendation",
+    "text": "What are the best transportation options for getting to the MRT station at Lebak Bulus?"
+  },
+  {
+    "intent": "service_recommendation",
+    "text": "Can you recommend a route that's accessible for someone using a wheelchair to get to the TransJakarta bus stop at Senayan?"
+  },
+  {
+    "intent": "asking_for_direction",
+    "text": "Can you give me directions to the nearest TransJakarta bus stop from the National Monument?"
+  },
+  {
+    "intent": "asking_for_direction",
+    "text": "How do I get to the MRT station at Setiabudi from the Plaza Semanggi?"
+  },
+  {
+    "intent": "asking_for_direction",
+    "text": "What is the best way to reach the KRL station at Sudirman from the Thamrin City shopping mall?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Are there any obstacles on the sidewalk leading to the TransJakarta bus stop at Monas?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Is there an audio announcement system at the MRT station at Cipete?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Can you tell me if there's a tactile path to the entrance of the KRL station at Pasar Minggu?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Are there any ramps or elevators available at the TransJakarta bus stop at Ragunan?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Is there a clear and accessible route to the ticket machine at the MRT station at Fatmawati?"
+  },
+  {
+    "intent": "service_recommendation",
+    "text": "What is the most accessible route to the KRL station at Duri from the Museum Nasional?"
+  },
+  {
+    "intent": "service_recommendation",
+    "text": "What are the best transportation options for getting to the MRT station at Cikini?"
+  },
+  {
+    "intent": "service_recommendation",
+    "text": "Can you recommend a route that's accessible for someone with limited mobility to get to the TransJakarta bus stop at Kuningan?"
+  },
+  {
+    "intent": "asking_for_direction",
+    "text": "Can you give me directions to the nearest TransJakarta bus stop from the National Museum?"
+  },
+  {
+    "intent": "asking_for_direction",
+    "text": "How do I get from the Senayan MRT station to the Blok M Transjakarta bus stop?"
+  },
+  {
+    "intent": "asking_for_direction",
+    "text": "Can you tell me the best way to reach the Gambir Station from here using the KRL?"
+  },
+  {
+    "intent": "asking_for_direction",
+    "text": "What's the fastest route to reach the  Ancol Station from the Mangga Dua area using TransJakarta?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Are there any steps or obstacles in front of the entrance to the MRT station?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Is there a tactile path leading to the ticket machine at the KRL station?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Can you tell me if there are any guide blocks on the sidewalk near the Transjakarta bus stop?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Are there any sound cues or announcements at the MRT station to help with navigation?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Is the area around the KRL station well-lit, or is it dark?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Is there a ramp or an elevator at the entrance to the Transjakarta bus stop?"
+  },
+  {
+    "intent": "service_recommendation",
+    "text": "What's the most accessible way to get to the Sudirman MRT station from here?"
+  },
+  {
+    "intent": "service_recommendation",
+    "text": "What's the best option for me to reach the Tanah Abang Station, considering I use a wheelchair?"
+  },
+  {
+    "intent": "service_recommendation",
+    "text": "Can you recommend the easiest route to reach the Dukuh Atas Station using public transportation?"
+  },
+  {
+    "intent": "asking_for_direction",
+    "text": "I need directions to the nearest TransJakarta bus stop from here. Could you help me?"
+  },
+  {
+    "intent": "asking_for_direction",
+    "text": "What's the quickest way to reach the  Monas Station using the KRL?"
+  },
+  {
+    "intent": "asking_for_direction",
+    "text": "How can I get to the  Mangga Besar Station from the Tanah Abang area using TransJakarta?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Is there a ramp available to access the KRL platform, or are there only stairs?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Are there any audio cues or announcements to guide me towards the Transjakarta bus stop?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Can you tell me if there are any tactile paths leading to the MRT entrance?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Is the area around the KRL station safe for navigating with a cane?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Are there any potential obstacles I should be aware of near the Transjakarta bus stop?"
+  },
+  {
+    "intent": "service_recommendation",
+    "text": "What's the most convenient way to get to the  Kota Station from here?"
+  },
+  {
+    "intent": "service_recommendation",
+    "text": "What's the best public transportation option for me to reach the  Cikini Station?"
+  },
+  {
+    "intent": "service_recommendation",
+    "text": "Can you suggest the easiest route to reach the  Jatinegara Station using public transportation?"
+  },
+  {
+    "intent": "asking_for_direction",
+    "text": "How do I get to the  Cawang Station from the nearest Transjakarta bus stop?"
+  },
+  {
+    "intent": "asking_for_direction",
+    "text": "What's the fastest way to reach the  Kalideres Station from the  Blok M area using the KRL?"
+  },
+  {
+    "intent": "asking_for_direction",
+    "text": "I need directions to the nearest KRL station from here, can you help?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Is there any information available about the layout of the Transjakarta bus stop?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Are there any tactile paths or guide blocks near the entrance to the MRT station?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Is the area around the KRL station generally accessible for people with visual impairments?"
+  },
+  {
+    "intent": "asking_for_direction",
+    "text": "How do I take the TransJakarta to reach the National Museum from Gambir Station?"
+  },
+  {
+    "intent": "asking_for_direction",
+    "text": "Can you tell me the best route to get to Blok M from Senayan using the MRT?"
+  },
+  {
+    "intent": "asking_for_direction",
+    "text": "What's the fastest way to go from Kota Station to the Grand Indonesia Mall using the KRL?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Are there any stairs or ramps at the entrance to the MRT station near the Sarinah building?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Is there a tactile path leading to the ticket machine at the TransJakarta bus stop near the Thamrin City mall?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Are there any obstacles or uneven surfaces on the sidewalk leading to the KRL platform at Tanah Abang Station?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Is there a guide block leading to the accessible entrance of the MRT station in Dukuh Atas?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Where are the audio announcements located in the TransJakarta bus shelter near the Pasar Baru Station?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Can you describe the layout of the KRL platform at the Manggarai Station?"
+  },
+  {
+    "intent": "service_recommendation",
+    "text": "What's the most accessible route to get to the Monas from the Hotel Indonesia using public transportation?"
+  },
+  {
+    "intent": "service_recommendation",
+    "text": "Is it easier to get to the Museum of Fine Arts from the Bundaran HI using the TransJakarta or the MRT?"
+  },
+  {
+    "intent": "service_recommendation",
+    "text": "What's the best public transport option for someone with mobility limitations to get to the Kota Tua area from the Sudirman area?"
+  },
+  {
+    "intent": "asking_for_direction",
+    "text": "Hey, how can I get to the Central Park Mall from the nearest TransJakarta bus stop in the afternoon?"
+  },
+  {
+    "intent": "asking_for_direction",
+    "text": "Can you tell me the best way to go to the Senayan Library from the Gelora Bung Karno Stadium using the MRT?"
+  },
+  {
+    "intent": "asking_for_direction",
+    "text": "What's the most efficient route to get to the National Monument from the Taman Mini Indonesia Indah using public transportation?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Are there any tactile paths or guide blocks near the entrance to the MRT station at the Lebak Bulus Terminal?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Can you tell me where the closest audio announcement system is to the KRL platform at the Jatinegara Station?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Is the sidewalk in front of the TransJakarta bus stop near the Kuningan City Mall safe for someone with visual impairment?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Is there an accessible entrance to the MRT station near the Plaza Senayan?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Can you describe the location of the ticket machines at the TransJakarta bus stop near the Plaza Indonesia?"
+  },
+  {
+    "intent": "service_recommendation",
+    "text": "What's the most convenient way to get to the Jakarta Aquarium from the nearest TransJakarta bus stop?"
+  },
+  {
+    "intent": "service_recommendation",
+    "text": "Could you recommend the best public transportation option for someone with a visual impairment to reach the Ragunan Zoo?"
+  },
+  {
+    "intent": "service_recommendation",
+    "text": "What's the most accessible route to get to the Jakarta Cathedral from the Gambir Station?"
+  },
+  {
+    "intent": "asking_for_direction",
+    "text": "What's the best way to get to the Museum Nasional from the Pasar Minggu area using the TransJakarta?"
+  },
+  {
+    "intent": "asking_for_direction",
+    "text": "Can you guide me on how to reach the National Gallery from the nearest MRT station?"
+  },
+  {
+    "intent": "asking_for_direction",
+    "text": "How do I get to the Museum of Art and Ceramics from the nearest TransJakarta bus stop?"
+  },
+  {
+    "intent": "asking_for_direction",
+    "text": "How do I get to the nearest TransJakarta bus stop from the Senayan MRT station?"
+  },
+  {
+    "intent": "asking_for_direction",
+    "text": "Can you tell me the best way to reach the Blok M terminal using the KRL from Depok station?"
+  },
+  {
+    "intent": "asking_for_direction",
+    "text": "What's the quickest route to get to the Tanah Abang MRT station from here using TransJakarta?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Are there any steps or obstacles I need to be aware of when approaching the TransJakarta bus stop at the Halim Perdanakusuma airport?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Can you tell me if there are any audio cues or announcements at the KRL platform at Manggarai station?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Is there a guide block leading to the ticket vending machine at the MRT station in Dukuh Atas?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Are there any potholes or uneven surfaces on the sidewalk leading to the TransJakarta stop at the National Monument?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Is the entrance to the KRL station at Jatinegara accessible for someone with a wheelchair?"
+  },
+  {
+    "intent": "service_recommendation",
+    "text": "What's the most accessible route to get to the Ragunan Zoo from the MRT station using TransJakarta?"
+  },
+  {
+    "intent": "service_recommendation",
+    "text": "What's the best option for getting to the Kota Tua area from the KRL station, considering accessibility?"
+  },
+  {
+    "intent": "service_recommendation",
+    "text": "Could you recommend the most accessible way to travel from the airport to the Grand Indonesia shopping mall using public transport?"
+  },
+  {
+    "intent": "asking_for_direction",
+    "text": "I'm at the Dukuh Atas MRT station. How can I get to the nearest TransJakarta bus stop?"
+  },
+  {
+    "intent": "asking_for_direction",
+    "text": "What's the best way to reach the Gambir station from here using the KRL?"
+  },
+  {
+    "intent": "asking_for_direction",
+    "text": "Can you give me directions to the nearest TransJakarta stop from the Kelapa Gading Mall?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Are there any audio announcements indicating train arrivals at the MRT station in Lebak Bulus?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Is there a tactile path leading to the entrance of the KRL station at the Pasar Senen terminal?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Can you tell me if there are any steps or obstacles at the TransJakarta stop in front of the Monas?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Are there any audio cues or announcements at the MRT station in  Sudirman?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Is the entrance to the KRL station at Bogor accessible for someone with a cane?"
+  },
+  {
+    "intent": "service_recommendation",
+    "text": "What's the most accessible route to get to the TMII from the MRT station?"
+  },
+  {
+    "intent": "service_recommendation",
+    "text": "What's the best option for getting to the Ancol Dreamland from the KRL station, considering accessibility?"
+  },
+  {
+    "intent": "service_recommendation",
+    "text": "Could you recommend the most accessible way to travel from the airport to the Kota Kasablanka mall using public transport?"
+  },
+  {
+    "intent": "asking_for_direction",
+    "text": "I'm at the  Cawang MRT station. How can I get to the nearest TransJakarta bus stop?"
+  },
+  {
+    "intent": "asking_for_direction",
+    "text": "What's the best way to reach the  Bekasi station from here using the KRL?"
+  },
+  {
+    "intent": "asking_for_direction",
+    "text": "Can you give me directions to the nearest TransJakarta stop from the  Mall of Indonesia?"
+  },
+  {
+    "intent": "asking_for_direction",
+    "text": "How do I get to the TransJakarta bus stop near Plaza Senayan from here?"
+  },
+  {
+    "intent": "asking_for_direction",
+    "text": "Can you tell me the best way to reach the MRT station at Dukuh Atas using the KRL?"
+  },
+  {
+    "intent": "asking_for_direction",
+    "text": "What's the fastest route to the Tanah Abang station from the Blok M station using TransJakarta?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Are there any stairs or ramps at the entrance of the KRL station at Manggarai?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Is there a tactile path leading to the ticket machine at the MRT station in Lebak Bulus?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Are there any obstacles or hazards in front of the TransJakarta bus stop at the Bundaran HI?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Can you tell me if there are any guide blocks near the MRT entrance at the Blok M station?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Is there a voice announcement system at the KRL station at Depok?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Are there any raised platforms near the TransJakarta bus stop at the Sudirman station?"
+  },
+  {
+    "intent": "service_recommendation",
+    "text": "What's the best route to get to the Jakarta Convention Center from the Blok M station?"
+  },
+  {
+    "intent": "service_recommendation",
+    "text": "What's the most accessible way to travel from the Tanah Abang station to the Kota station using TransJakarta?"
+  },
+  {
+    "intent": "service_recommendation",
+    "text": "Can you recommend a route with the least number of transfers to get to the MRT station at Bundaran HI from the KRL station at Duren Kalibata?"
+  },
+  {
+    "intent": "asking_for_direction",
+    "text": "Hey, how can I get to the MRT station at Cipete using TransJakarta?"
+  },
+  {
+    "intent": "asking_for_direction",
+    "text": "I'm at the TransJakarta bus stop near the Senayan City, how do I get to the KRL station at Sudirman?"
+  },
+  {
+    "intent": "asking_for_direction",
+    "text": "Could you please tell me the best route to the MRT station at Dukuh Atas from the KRL station at Manggarai?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Are there any steps or obstacles in front of the TransJakarta bus stop at the Plaza Indonesia?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Is there an elevator to access the MRT station platform at the Lebak Bulus station?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Are there any tactile paths or guide blocks near the KRL station entrance at the Depok station?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Is there a voice announcement system at the MRT station at the Bundaran HI?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Are there any raised platforms near the TransJakarta bus stop at the Kuningan station?"
+  },
+  {
+    "intent": "service_recommendation",
+    "text": "What's the most accessible route to get to the Thamrin City from the MRT station at Dukuh Atas?"
+  },
+  {
+    "intent": "service_recommendation",
+    "text": "Can you suggest a route with the least number of transfers to get to the KRL station at Duren Kalibata from the TransJakarta bus stop near the Plaza Senayan?"
+  },
+  {
+    "intent": "service_recommendation",
+    "text": "What's the easiest way to travel from the KRL station at Manggarai to the MRT station at Lebak Bulus?"
+  },
+  {
+    "intent": "asking_for_direction",
+    "text": "Could you guide me to the TransJakarta bus stop at the Bundaran HI from here?"
+  },
+  {
+    "intent": "asking_for_direction",
+    "text": "How do I get to the MRT station at Cipete from the TransJakarta bus stop near the Senayan City?"
+  },
+  {
+    "intent": "asking_for_direction",
+    "text": "What's the best route to reach the KRL station at Sudirman from the MRT station at Dukuh Atas?"
+  },
+  {
+    "intent": "asking_for_direction",
+    "text": "I'm near the Senayan MRT station. How do I get to the Blok M MRT station using the MRT?"
+  },
+  {
+    "intent": "asking_for_direction",
+    "text": "What's the best way to reach the Gambir station using the KRL from here?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Are there any steps or ramps near the ticket machine?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Is there a clear sidewalk with no obstacles near the bus stop?"
+  },
+  {
+    "intent": "service_recommendation",
+    "text": "What's the most convenient way to get to the Tanah Abang market, taking accessibility into account?"
+  },
+  {
+    "intent": "service_recommendation",
+    "text": "Which route is the most accessible for a visually impaired person to travel from Kota Station to Monas?"
+  },
+  {
+    "intent": "service_recommendation",
+    "text": "What's the best option for getting to the Grand Indonesia mall from here, considering accessibility?"
+  },
+  {
+    "intent": "asking_for_direction",
+    "text": "Could you guide me on how to reach the nearest KRL station from here?"
+  },
+  {
+    "intent": "asking_for_direction",
+    "text": "How do I get to the Dukuh Atas MRT station from the Central Park mall using public transport?"
+  },
+  {
+    "intent": "asking_for_direction",
+    "text": "I'm looking for directions to the nearest TransJakarta stop from the Sudirman area, please."
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Are there any audio cues or sounds that indicate the location of the bus stop?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Is there a clear and safe path to the entrance of the MRT station?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "I'm at the bus stop. Are there any benches or seating areas available?"
+  },
+  {
+    "intent": "service_recommendation",
+    "text": "What is the most accessible route to get to the Taman Mini Indonesia Indah from here?"
+  },
+  {
+    "intent": "service_recommendation",
+    "text": "Can you recommend the best route to travel from the Mangga Besar area to the Ancol Dreamland, considering accessibility?"
+  },
+  {
+    "intent": "service_recommendation",
+    "text": "What are the best public transport options for a visually impaired person to travel to the Ragunan Zoo?"
+  },
+  {
+    "intent": "asking_for_direction",
+    "text": "Can you give me directions to the nearest TransJakarta stop from here?"
+  },
+  {
+    "intent": "asking_for_direction",
+    "text": "How can I get to the nearest MRT station from this location?"
+  },
+  {
+    "intent": "asking_for_direction",
+    "text": "What is the best way to reach the Jakarta International Expo (JIExpo) from here using public transport?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Is there a guide block leading to the escalator at the MRT station?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Are there any tactile warnings indicating potential hazards on the sidewalk?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Is there a dedicated lane for pedestrians near the bus stop?"
+  },
+  {
+    "intent": "service_recommendation",
+    "text": "What's the most accessible route to get to the National Museum from here?"
+  },
+  {
+    "intent": "service_recommendation",
+    "text": "Can you recommend the most accessible route to the Pasar Baru area, considering the time of day?"
+  },
+  {
+    "intent": "asking_for_direction",
+    "text": "How do I take the TransJakarta from the Mangga Besar station to the Senayan station?"
+  },
+  {
+    "intent": "asking_for_direction",
+    "text": "What's the best way to get to Blok M from here using the MRT?"
+  },
+  {
+    "intent": "asking_for_direction",
+    "text": "Can you tell me the fastest route to the Tanah Abang station via KRL?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Are there any steps or ramps at the bus stop near the Grand Indonesia mall?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Can you tell me if there are any obstacles near the ticket machines at the Gambir station?"
+  },
+  {
+    "intent": "service_recommendation",
+    "text": "What's the most accessible way to travel from the Ragunan station to the Monas?"
+  },
+  {
+    "intent": "service_recommendation",
+    "text": "What's the best transport option for someone with limited mobility to get from Cilandak to the airport?"
+  },
+  {
+    "intent": "service_recommendation",
+    "text": "Can you recommend the most accessible route for a visually impaired person to get from the Kota station to the Sudirman station?"
+  },
+  {
+    "intent": "asking_for_direction",
+    "text": "Could you tell me the quickest way to get to the Mangga Dua station using the TransJakarta?"
+  },
+  {
+    "intent": "asking_for_direction",
+    "text": "How do I get to the nearest KRL station from here, please?"
+  },
+  {
+    "intent": "asking_for_direction",
+    "text": "I need directions from the Pasar Minggu station to the Bundaran HI station using the MRT. Can you help me?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Are there any audio cues or announcements at the bus stop near the Thamrin City?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Are there any tactile guide blocks on the sidewalk leading to the entrance of the TransJakarta bus stop?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Is there a ramp or lift available at the KRL station in Depok?"
+  },
+  {
+    "intent": "service_recommendation",
+    "text": "Which is the most accessible route to get to the Jakarta Convention Center from the Lebak Bulus station?"
+  },
+  {
+    "intent": "service_recommendation",
+    "text": "What's the best way for someone with a visual impairment to travel from the Kelapa Gading station to the Ancol Dreamland?"
+  },
+  {
+    "intent": "service_recommendation",
+    "text": "Can you recommend an accessible route to the National Museum from the Tanah Abang station?"
+  },
+  {
+    "intent": "asking_for_direction",
+    "text": "What's the easiest way to get from the Jatinegara station to the Senayan station using the MRT?"
+  },
+  {
+    "intent": "asking_for_direction",
+    "text": "Can you guide me on how to get to the nearest KRL station from here?"
+  },
+  {
+    "intent": "asking_for_direction",
+    "text": "How do I travel from the Sudirman station to the Pasar Baru station using the TransJakarta?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Are there any guide blocks on the sidewalk leading to the entrance of the MRT station at the Blok M?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Is there a tactile map at the bus stop near the Plaza Indonesia?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Is there a lift available at the KRL station in Bogor?"
+  },
+  {
+    "intent": "service_recommendation",
+    "text": "What's the most accessible way to get to the Gelora Bung Karno Stadium from the Lebak Bulus station?"
+  },
+  {
+    "intent": "service_recommendation",
+    "text": "Can you recommend an accessible route for a visually impaired person to travel from the Grogol station to the Museum Nasional?"
+  },
+  {
+    "intent": "asking_for_direction",
+    "text": "Can you tell me how to get to the Senayan MRT station from the Blok M TransJakarta stop?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Is there a tactile path leading to the entrance of the Sudirman KRL station?"
+  },
+  {
+    "intent": "service_recommendation",
+    "text": "What's the easiest way to get to the Manggarai Station from here, considering I have a stroller?"
+  },
+  {
+    "intent": "asking_for_direction",
+    "text": "I'm near the Tosari TransJakarta station. How do I get to the National Museum using public transport?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Are there any steps or ramps at the entrance of the Dukuh Atas MRT station?"
+  },
+  {
+    "intent": "service_recommendation",
+    "text": "What's the best route to take from the Tanah Abang station to the Gambir station, especially considering the afternoon rush hour?"
+  },
+  {
+    "intent": "asking_for_direction",
+    "text": "How do I get to the Halim Perdanakusuma Airport from the Lebak Bulus TransJakarta terminal?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Are there any audio cues or announcements at the Pasar Minggu TransJakarta station?"
+  },
+  {
+    "intent": "service_recommendation",
+    "text": "What's the most accessible route to the Grand Indonesia shopping mall from the Bundaran HI MRT station?"
+  },
+  {
+    "intent": "asking_for_direction",
+    "text": "Can you tell me the quickest way to get to the Ragunan Zoo from the Cipete TransJakarta stop?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Is there a designated area for visually impaired people at the Pondok Indah TransJakarta stop?"
+  },
+  {
+    "intent": "service_recommendation",
+    "text": "I'm going to the Jakarta Convention Center from the Kuningan TransJakarta station. What's the best transport option?"
+  },
+  {
+    "intent": "asking_for_direction",
+    "text": "How do I get to the Monas from the Gambir station using public transport?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Are there any obstacles like benches or poles in front of the KRL platform at the Duri station?"
+  },
+  {
+    "intent": "service_recommendation",
+    "text": "What's the most accessible route to the National Library from the Central Park TransJakarta station?"
+  },
+  {
+    "intent": "asking_for_direction",
+    "text": "Can you help me find the way from the Kota Tua area to the Museum Nasional using public transport?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Are there any tactile paths or guide blocks leading to the ticket machines at the Manggarai station?"
+  },
+  {
+    "intent": "service_recommendation",
+    "text": "What's the best way to get to the Ancol Dreamland from the Pluit TransJakarta station, especially if it's raining?"
+  },
+  {
+    "intent": "asking_for_direction",
+    "text": "I'm at the Dukuh Atas MRT station. How do I get to the Thamrin City shopping center?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Are there any audio announcements or signs at the entrance of the Pasar Senen TransJakarta station?"
+  },
+  {
+    "intent": "service_recommendation",
+    "text": "What's the most accessible route to the Gelora Bung Karno Stadium from the Senayan MRT station?"
+  },
+  {
+    "intent": "asking_for_direction",
+    "text": "Can you tell me how to get to the Taman Mini Indonesia Indah from the Kampung Rambutan TransJakarta terminal?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Is there a tactile path leading to the escalator at the Tanah Abang station?"
+  },
+  {
+    "intent": "service_recommendation",
+    "text": "What's the easiest way to get to the Jakarta Cathedral from the Harmoni TransJakarta stop?"
+  },
+  {
+    "intent": "asking_for_direction",
+    "text": "How do I get to the Museum of Fine Arts and Ceramics from the Tanah Abang station?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Are there any audio cues or announcements at the Sudirman KRL station?"
+  },
+  {
+    "intent": "service_recommendation",
+    "text": "What's the most accessible route to the National Monument from the Monas TransJakarta stop?"
+  },
+  {
+    "intent": "asking_for_direction",
+    "text": "Can you tell me the best way to get to the Senayan MRT station from the Grand Indonesia Mall using TransJakarta?"
+  },
+  {
+    "intent": "asking_for_direction",
+    "text": "How do I get to the Blok M bus stop from here? I'm looking for the TransJakarta route that goes to the Kota Station."
+  },
+  {
+    "intent": "asking_for_direction",
+    "text": "What's the quickest way to get to the Sudirman KRL station from the Sarinah building?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "I'm standing in front of the TransJakarta bus stop at Mangga Dua. Are there any steps leading up to the bus?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Are there any audio announcements at the KRL station in Tanah Abang?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Where are the tactile guide blocks leading to the ticket machine at the MRT station in Bundaran HI?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Is there a ramp at the entrance of the TransJakarta bus stop at Ragunan?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Are there any hazards or obstacles in front of the KRL station entrance at Jatinegara?"
+  },
+  {
+    "intent": "service_recommendation",
+    "text": "What is the most accessible route to reach the KRL station at Gambir from the National Monument (Monas)?"
+  },
+  {
+    "intent": "service_recommendation",
+    "text": "Which TransJakarta route is most accessible for people with visual impairments travelling to the  Blok M station?"
+  },
+  {
+    "intent": "service_recommendation",
+    "text": "What is the best option for getting to the MRT station at Lebak Bulus from the Pasar Minggu area considering accessibility?"
+  },
+  {
+    "intent": "asking_for_direction",
+    "text": "Could you tell me how to get from the Plaza Semanggi to the MRT station at Dukuh Atas?"
+  },
+  {
+    "intent": "asking_for_direction",
+    "text": "I'm looking for directions from the Taman Mini Indonesia Indah to the nearest KRL station. What's the best way to go?"
+  },
+  {
+    "intent": "asking_for_direction",
+    "text": "Can you guide me on how to reach the TransJakarta bus stop at Halim Perdana Kusuma from the nearest MRT station?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Are there any audible signals indicating the arrival of the TransJakarta bus at the bus stop near the Senayan MRT station?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Is there a designated waiting area for people with visual impairments at the KRL station in Jakarta Kota?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Are there any obstacles or hazards on the platform of the MRT station at Bundaran HI?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "I'm at the TransJakarta bus stop in front of the Plaza Indonesia. Is there a tactile path leading to the bus stop?"
+  },
+  {
+    "intent": "service_recommendation",
+    "text": "What is the most accessible route to reach the KRL station at Depok from the Pondok Indah area?"
+  },
+  {
+    "intent": "service_recommendation",
+    "text": "Which route is most convenient for people with visual impairments travelling from the Tanah Abang station to the Central Park Mall using TransJakarta?"
+  },
+  {
+    "intent": "service_recommendation",
+    "text": "What's the best option for getting to the MRT station at Cipete Raya from the Ragunan Zoo considering accessibility?"
+  },
+  {
+    "intent": "asking_for_direction",
+    "text": "Can you tell me the best way to get to the KRL station at Manggarai from the  Sudirman area using TransJakarta?"
+  },
+  {
+    "intent": "asking_for_direction",
+    "text": "I'm looking for directions from the Thamrin City to the nearest MRT station. Could you guide me?"
+  },
+  {
+    "intent": "asking_for_direction",
+    "text": "How do I get to the TransJakarta bus stop at the  Cibubur Junction from the nearest KRL station?"
+  },
+  {
+    "intent": "asking_for_direction",
+    "text": "Can you tell me the best route to take to reach the MRT station at Dukuh Atas from the Central Park Mall?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Is there a tactile path leading to the MRT entrance at the Bundaran HI station?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Are there any steps or uneven surfaces on the sidewalk leading to the TransJakarta shelter near the Plaza Semanggi?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "I'm at the entrance of the KRL station at Tanah Abang, can you tell me if there are any obstacles or hazards in front of me?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Is there a clear audio announcement system at the MRT station at Lebak Bulus?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Can you tell me the layout of the platform at the TransJakarta bus stop near the Kota Tua area?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Are there any guide blocks or tactile indicators on the floor leading to the escalator at the MRT station at Cipete?"
+  },
+  {
+    "intent": "service_recommendation",
+    "text": "What's the most accessible route to get to the Pasar Minggu station using public transport?"
+  },
+  {
+    "intent": "service_recommendation",
+    "text": "Which transport option is the most accessible for me to travel from the Sudirman area to the Manggarai station?"
+  },
+  {
+    "intent": "service_recommendation",
+    "text": "Can you recommend the best route to get to the KRL station at Juanda from the National Museum?"
+  },
+  {
+    "intent": "service_recommendation",
+    "text": "What is the most accessible way to travel from the Ragunan Zoo to the Monas using public transport?"
+  },
+  {
+    "intent": "service_recommendation",
+    "text": "Is there an accessible route to get to the TransJakarta bus stop at the Kelapa Gading area?"
+  },
+  {
+    "intent": "asking_for_direction",
+    "text": "What's the best way to get to the MRT station at Setiabudi using the TransJakarta bus service?"
+  },
+  {
+    "intent": "asking_for_direction",
+    "text": "I'm at the Gambir station, how can I get to the nearest TransJakarta bus stop from here?"
+  },
+  {
+    "intent": "asking_for_direction",
+    "text": "Could you please tell me how to get to the KRL station at Jatinegara from the Pasar Rebo area?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Is there a clear announcement system about the arrival and departure of trains at the MRT station at Fatmawati?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Is there a tactile path or any other accessibility features leading to the KRL platform at the Manggarai station?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Are there any steps or obstacles near the entrance of the TransJakarta bus stop at the Thamrin area?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Can you describe the layout of the platform at the TransJakarta bus stop near the Senayan area?"
+  },
+  {
+    "intent": "analyzing_surroundings",
+    "text": "Is there any clear audio guidance at the MRT station at Lebak Bulus about the location of the exit?"
+  },
+  {
+    "intent": "service_recommendation",
+    "text": "What's the most accessible route to get to the KRL station at Bogor from the Blok M area?"
+  },
+  {
+    "intent": "service_recommendation",
+    "text": "Which public transport option is the most accessible for travelling from the Kota Tua area to the Monas?"
+  },
+  {
+    "intent": "service_recommendation",
+    "text": "Can you recommend the best route to get to the TransJakarta bus stop at the Grogol area, considering accessibility?"
+  }
+]

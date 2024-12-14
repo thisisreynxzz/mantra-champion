@@ -26,3 +26,5 @@ backend/mantra
 *.pt
 backend/bmth-sa-key.json
 backend/config.py
+.env
+backend/.env
