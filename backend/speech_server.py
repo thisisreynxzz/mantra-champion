@@ -15,6 +15,58 @@ async def speech_recognition_handler(websocket):
             encoding=speech.RecognitionConfig.AudioEncoding.LINEAR16,
             sample_rate_hertz=16000,
             language_code="en-US",
+            model="latest_long",
+            use_enhanced=True,
+            profanity_filter=False,
+            enable_automatic_punctuation=True,
+            enable_spoken_punctuation=True,
+            enable_spoken_emojis=True,
+            speech_contexts=[{
+                "phrases": [
+                    # Navigation Commands
+                    "MANTRA", "navigation", "directions", "help",
+                    
+                    # MRT Stations
+                    "Bundaran HI", "Dukuh Atas", "Bendungan Hilir", "Setiabudi",
+                    "Istora", "Senayan", "ASEAN", "Blok M", "Blok A", "Haji Nawi",
+                    "Fatmawati", "Cipete Raya", "Lebak Bulus", "Lebak Bulus Grab",
+                    
+                    # KRL Stations
+                    "Tanah Abang", "Sudirman", "Manggarai", "Cikini", "Gondangdia",
+                    "Juanda", "Sawah Besar", "Jayakarta", "Jakarta Kota",
+                    "Tebet", "Cawang", "Duren Kalibata", "Pasar Minggu",
+                    
+                    # TransJakarta Corridors & Major Stops
+                    "Blok M", "Harmoni", "Grogol", "Kalideres",
+                    "Pulogadung", "Kampung Melayu", "Ragunan",
+                    "Tanjung Priok", "Pluit", "Pinang Ranti",
+                    
+                    # Major Areas/Districts
+                    "Thamrin", "Sudirman", "Kuningan", "Menteng",
+                    "Senayan", "Kebayoran", "Kemang", "SCBD",
+                    "Monas", "Glodok", "Kota Tua",
+                    
+                    # Shopping Centers
+                    "Grand Indonesia", "Plaza Indonesia", "Pacific Place",
+                    "Senayan City", "Plaza Senayan", "Sarinah",
+                    "Central Park", "Taman Anggrek", "Kota Kasablanka",
+                    
+                    # Common Place Types
+                    "halte", "stasiun", "terminal", "mall", "plaza",
+                    "rumah sakit", "hospital", "school", "university",
+                    "mosque", "masjid", "church", "gereja",
+                    
+                    # Common Indonesian Words in Navigation
+                    "jalan", "street", "gedung", "building",
+                    "persimpangan", "intersection", "belok", "turn",
+                    "kanan", "right", "kiri", "left", "lurus", "straight",
+                    "lewat", "through", "sampai", "until"
+                ],
+                "boost": 20.0
+            }],
+            # Audio settings for better quality
+            audio_channel_count=1,  # Mono audio
+            enable_separate_recognition_per_channel=False,
         )
 
         streaming_config = speech.StreamingRecognitionConfig(
