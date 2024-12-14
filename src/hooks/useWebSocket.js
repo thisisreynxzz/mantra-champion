@@ -7,7 +7,7 @@ export const useWebSocket = (videoRef, onDetections) => {
 
   useEffect(() => {
     const connectWebSocket = () => {
-      wsRef.current = new WebSocket('ws://0.0.0.0:8000/ws');
+      wsRef.current = new WebSocket('ws://0.0.0.0:8001/ws');
       
       wsRef.current.onmessage = (event) => {
         const newDetections = JSON.parse(event.data);

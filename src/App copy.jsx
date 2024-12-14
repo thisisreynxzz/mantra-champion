@@ -1,4 +1,5 @@
-import React, { useCallback } from 'react'; // Add useCallback import
+// src/App.jsx (modified)
+import React from 'react';
 import { useCamera } from './hooks/useCamera';
 import { useWebSocket } from './hooks/useWebSocket';
 import { useGoogleMaps } from './hooks/useGoogleMaps';

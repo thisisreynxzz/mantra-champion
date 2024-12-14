@@ -28,3 +28,4 @@ backend/bmth-sa-key.json
 backend/config.py
 .env
 backend/.env
+__pycache__
