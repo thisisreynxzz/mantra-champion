@@ -1,7 +1,6 @@
-import React, { useCallback } from 'react';
+import React, { useCallback, useState, useEffect } from 'react';
 import { useCamera } from './hooks/useCamera';
 import { useWebSocket } from './hooks/useWebSocket';
-import { useGoogleMaps } from './hooks/useGoogleMaps';
 import { useSpeechRecognition } from './hooks/useSpeechRecognition';
 import { drawDetections } from './utils/drawUtils';
 import { CameraView } from './components/CameraView';
@@ -11,7 +10,11 @@ import { VoiceControl } from './components/VoiceControl';
 
 const App = () => {
   const { videoRef, canvasRef } = useCamera();
-  const { mapRef, mapError, isMapLoading, routeDetails } = useGoogleMaps();
+  const [routeDetails, setRouteDetails] = useState({ 
+    duration: null,
+    destination: 'Stasiun MRT Bundaran HI Bank DKI' 
+  });
+
   const {
     isListening,
     transcript,
@@ -28,47 +31,61 @@ const App = () => {
 
   const detections = useWebSocket(videoRef, handleDetections);
 
-  const handleVoiceControl = () => {
+  const handleVoiceControl = useCallback(() => {
     if (isListening) {
       stopListening();
     } else {
       startListening();
     }
-  };
+  }, [isListening, startListening, stopListening]);
+
+  const handleRouteUpdate = useCallback((newRouteDetails) => {
+    setRouteDetails(prev => ({
+      ...prev,
+      duration: newRouteDetails.duration
+    }));
+  }, []);
+
+  // Handle intent-based route updates
+  useEffect(() => {
+    if (intent?.type === 'asking_for_direction' && entities?.length > 0) {
+      const destination = entities.find(e => 
+        ['station', 'poi', 'terminal'].includes(e.type)
+      );
+      if (destination) {
+        setRouteDetails(prev => ({
+          ...prev,
+          destination: destination.value
+        }));
+      }
+    }
+  }, [intent, entities]);
 
   return (
     <div className="w-full h-screen flex flex-col bg-white relative overflow-hidden">
-      {/* Main content area */}
-      <div className="flex-1">
-        <CameraView 
-          videoRef={videoRef}
-          canvasRef={canvasRef}
-          detections={detections}
-        />
+      {/* Camera View */}
+      <CameraView 
+        videoRef={videoRef}
+        canvasRef={canvasRef}
+        detections={detections}
+      />
+
+      {/* Map and Info Container */}
+      <div className="flex-1 relative">
         <MapView 
-          mapRef={mapRef}
-          isMapLoading={isMapLoading}
-          mapError={mapError}
+          destination={routeDetails.destination}
+          onRouteUpdate={handleRouteUpdate}
         />
       </div>
 
-      {/* Bottom UI stack with proper spacing */}
-      <div className="fixed bottom-0 left-0 right-0 flex flex-col gap-4 p-4">
-        {routeDetails?.destination && (
-          <DestinationInfo 
-            routeDetails={routeDetails}
-            intent={intent}
-            entities={entities}
-          />
-        )}
-        <VoiceControl 
-          isListening={isListening}
-          onVoiceControl={handleVoiceControl}
-          transcript={transcript}
-          intent={intent}
-          entities={entities}
-        />
-      </div>
+      {/* Voice Control Component */}
+      <VoiceControl
+        isListening={isListening}
+        onVoiceControl={handleVoiceControl}
+        transcript={transcript}
+        intent={intent}
+        entities={entities}
+      />
     </div>
   );
 };

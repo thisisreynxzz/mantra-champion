@@ -30,3 +30,4 @@ backend/config.py
 backend/.env
 __pycache__
 backend/gemini_for_yolo_dataset
+.gradio
