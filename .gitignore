@@ -29,3 +29,4 @@ backend/config.py
 .env
 backend/.env
 __pycache__
+backend/gemini_for_yolo_dataset
