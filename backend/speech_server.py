@@ -8,16 +8,19 @@ import vertexai
 from vertexai.generative_models import GenerativeModel, GenerationConfig
 import datetime
 from speechToText import MicrophoneStream
-from typing import Dict, Any
+from typing import Dict, Any, List
 import tensorflow as tf
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.preprocessing import LabelEncoder
 import pickle
 import numpy as np
+import re
+from datetime import timedelta
+from asyncio import Lock, sleep
+from hashlib import md5
 
 app = FastAPI()
 
-# Add CORS middleware
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],
@@ -26,13 +29,37 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+class RateLimitedGemini:
+    def __init__(self, requests_per_minute: int = 60):
+        self.lock = Lock()
+        self.requests_per_minute = requests_per_minute
+        self.requests = []
+        self.retry_delay = 2
+
+    async def execute(self, func, *args, **kwargs):
+        async with self.lock:
+            current_time = datetime.datetime.now()
+            self.requests = [t for t in self.requests if current_time - t < timedelta(minutes=1)]
+            
+            while len(self.requests) >= self.requests_per_minute:
+                await sleep(self.retry_delay)
+                current_time = datetime.datetime.now()
+                self.requests = [t for t in self.requests if current_time - t < timedelta(minutes=1)]
+
+            try:
+                result = await func(*args, **kwargs)
+                self.requests.append(current_time)
+                return result
+            except Exception as e:
+                if "429" in str(e):
+                    await sleep(self.retry_delay)
+                    return await self.execute(func, *args, **kwargs)
+                raise e
+
 class IntentClassifier:
     def __init__(self, model_path_prefix: str):
-        """Load the pre-trained intent classification model."""
-        # Load the trained model
         self.model = tf.keras.models.load_model(f'{model_path_prefix}_model.h5')
         
-        # Load vectorizer and label encoder
         with open(f'{model_path_prefix}_vectorizer.pkl', 'rb') as f:
             self.vectorizer = pickle.load(f)
         
@@ -40,16 +67,10 @@ class IntentClassifier:
             self.label_encoder = pickle.load(f)
 
     def predict(self, text: str) -> Dict[str, Any]:
-        """Predict intent for input text."""
-        # Vectorize the input text
         X = self.vectorizer.transform([text]).toarray()
-        
-        # Get prediction probabilities
         probs = self.model.predict(X)[0]
         pred_class = np.argmax(probs)
         confidence = float(probs[pred_class])
-        
-        # Convert prediction to intent label
         predicted_intent = self.label_encoder.inverse_transform([pred_class])[0]
         
         return {
@@ -64,14 +85,38 @@ class SpeechProcessor:
         self.gemini_model = self.init_vertexai()
         self.intent_classifier = IntentClassifier(intent_model_path)
         self.config = self.get_speech_config()
+        self.rate_limiter = RateLimitedGemini()
+        self.entity_cache = {}
+        self.cache_ttl = 3600
+        
+        # Entity patterns for fallback
+        self.entities_patterns = {
+            'station': [
+                r'(Bundaran HI|Dukuh Atas|Bendungan Hilir|Setiabudi|Istora|Senayan|ASEAN|Blok M|Blok A|Haji Nawi|Fatmawati|Cipete Raya|Lebak Bulus)',
+                r'(Tanah Abang|Sudirman|Manggarai|Cikini|Gondangdia|Juanda|Sawah Besar|Jayakarta|Jakarta Kota|Tebet|Cawang|Duren Kalibata|Pasar Minggu)'
+            ],
+            'poi': [
+                r'(Grand Indonesia|Plaza Indonesia|Pacific Place|Senayan City|Plaza Senayan|Sarinah|Central Park|Taman Anggrek|Kota Kasablanka)',
+                r'(Monas|Glodok|Kota Tua|Thamrin City)'
+            ],
+            'transport_type': [
+                r'(MRT|KRL|TransJakarta|bus|train|kereta)'
+            ],
+            'facility': [
+                r'(elevator|escalator|lift|stairs|ramp|toilet|gate|exit|entrance)'
+            ]
+        }
+        self.compiled_patterns = {
+            entity_type: [re.compile(pattern, re.IGNORECASE) 
+                         for pattern in patterns]
+            for entity_type, patterns in self.entities_patterns.items()
+        }
 
     def init_vertexai(self):
-        """Initialize VertexAI for entity extraction."""
         vertexai.init(project=self.project_id, location="us-central1")
         return GenerativeModel("gemini-1.5-flash")
 
     def get_speech_config(self) -> speech.RecognitionConfig:
-        """Get speech recognition configuration."""
         return speech.RecognitionConfig(
             encoding=speech.RecognitionConfig.AudioEncoding.LINEAR16,
             sample_rate_hertz=16000,
@@ -126,8 +171,25 @@ class SpeechProcessor:
             enable_separate_recognition_per_channel=False,
         )
 
+    def _cache_key(self, text: str) -> str:
+        return md5(text.lower().strip().encode()).hexdigest()
+
+    def fallback_entity_extraction(self, text: str) -> Dict[str, List]:
+        entities = []
+        
+        for entity_type, patterns in self.compiled_patterns.items():
+            for pattern in patterns:
+                for match in pattern.finditer(text):
+                    entities.append({
+                        "type": entity_type,
+                        "value": match.group(),
+                        "start": match.start(),
+                        "end": match.end()
+                    })
+        
+        return {"entities": entities}
+
     def _get_entity_schema(self) -> Dict:
-        """Get schema for entity extraction."""
         return {
             "type": "object",
             "properties": {
@@ -153,7 +215,6 @@ class SpeechProcessor:
         }
 
     def _create_entity_prompt(self, text: str) -> str:
-        """Create prompt for entity extraction."""
         return f"""Extract entities from the following Jakarta public transportation query:
 
 "{text}"
@@ -170,32 +231,50 @@ Identify entities including:
 Return structured JSON with entity mentions and their positions in the text."""
 
     async def extract_entities(self, text: str) -> Dict[str, Any]:
-        """Extract entities using Gemini."""
+        cache_key = self._cache_key(text)
+        current_time = datetime.datetime.now().timestamp()
+
+        if cache_key in self.entity_cache:
+            cached_result, timestamp = self.entity_cache[cache_key]
+            if current_time - timestamp < self.cache_ttl:
+                return cached_result
+
         try:
-            response = self.gemini_model.generate_content(
-                self._create_entity_prompt(text),
-                generation_config=GenerationConfig(
-                    temperature=0.1,
-                    candidate_count=1,
-                    max_output_tokens=1024,
-                    response_mime_type="application/json",
-                    response_schema=self._get_entity_schema()
+            async def _extract():
+                response = self.gemini_model.generate_content(
+                    self._create_entity_prompt(text),
+                    generation_config=GenerationConfig(
+                        temperature=0.1,
+                        candidate_count=1,
+                        max_output_tokens=1024,
+                        response_mime_type="application/json",
+                        response_schema=self._get_entity_schema()
+                    )
                 )
-            )
+                return json.loads(response.text)
+
+            result = await self.rate_limiter.execute(_extract)
+            self.entity_cache[cache_key] = (result, current_time)
             
-            return json.loads(response.text)
+            # Clean old cache entries
+            self.entity_cache = {
+                k: v for k, v in self.entity_cache.items()
+                if current_time - v[1] < self.cache_ttl
+            }
+            
+            return result
             
         except Exception as e:
             print(f"Entity extraction error: {e}")
-            return {"entities": []}
+            print("Using fallback entity extraction")
+            return self.fallback_entity_extraction(text)
 
     async def process_text(self, text: str) -> Dict[str, Any]:
-        """Process text through intent classification and entity extraction."""
         try:
             # Get intent from trained model
             intent_result = self.intent_classifier.predict(text)
             
-            # Get entities from Gemini
+            # Get entities with fallback and caching
             entity_result = await self.extract_entities(text)
             
             return {
@@ -246,7 +325,6 @@ async def websocket_endpoint(websocket: WebSocket):
 
                 if result.is_final:
                     try:
-                        # Process through both models
                         classification = await speech_processor.process_text(transcript)
                         
                         await websocket.send_json({
