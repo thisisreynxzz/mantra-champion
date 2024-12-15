@@ -12,7 +12,7 @@ export const useSpeechRecognition = () => {
   useEffect(() => {
     if (isListening && !wsRef.current) {
       try {
-        wsRef.current = new WebSocket('ws://localhost:8000');
+        wsRef.current = new WebSocket('ws://localhost:8000/ws');
         
         console.log('Attempting Speech WebSocket connection...');
 

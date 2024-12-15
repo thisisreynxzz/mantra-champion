@@ -1,120 +1,84 @@
+from fastapi import FastAPI, WebSocket
+from fastapi.middleware.cors import CORSMiddleware
 import asyncio
 import json
-import websockets
-from speechToText import MicrophoneStream, listen_print_loop
 from google.cloud import speech
 from config import SA_JSON_FILE_PATH
 import vertexai
 from vertexai.generative_models import GenerativeModel, GenerationConfig
 import datetime
+from speechToText import MicrophoneStream
+from typing import Dict, Any
+import tensorflow as tf
+from sklearn.feature_extraction.text import TfidfVectorizer
+from sklearn.preprocessing import LabelEncoder
+import pickle
+import numpy as np
 
-def init_vertexai(project_id, location="us-central1"):
-    """Initialize VertexAI with project settings."""
-    vertexai.init(project=project_id, location=location)
-    return GenerativeModel("gemini-1.5-flash")
+app = FastAPI()
 
-def get_response_schema():
-    return {
-        "type": "object",
-        "properties": {
-            "intent": {
-                "type": "object",
-                "properties": {
-                    "type": {
-                        "type": "string",
-                        "enum": ["asking_for_direction", "analyzing_surroundings", "service_recommendation"]
-                    },
-                    "confidence": {"type": "number"}
-                },
-                "required": ["type", "confidence"]
-            },
-            "entities": {
-                "type": "array",
-                "items": {
-                    "type": "object",
-                    "properties": {
-                        "type": {
-                            "type": "string",
-                            "enum": ["station", "poi", "terminal", "route", "transport_type", "obstacle", "facility"]
-                        },
-                        "value": {"type": "string"},
-                        "start": {"type": "integer"},
-                        "end": {"type": "integer"}
-                    },
-                    "required": ["type", "value", "start", "end"]
-                }
-            }
-        },
-        "required": ["intent", "entities"]
-    }
+# Add CORS middleware
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
-def create_classification_prompt(text):
-    return f"""Analyze the following user utterance for intent and entities related to Jakarta public transportation:
-
-"{text}"
-
-Classify the intent as one of:
-- asking_for_direction: Questions about getting somewhere using public transport
-- analyzing_surroundings: Questions about immediate environment/obstacles near transport facilities
-- service_recommendation: Questions about recommended routes or transport options
-
-Identify entities including:
-- stations (MRT/KRL)
-- POIs (landmarks, malls)
-- terminals
-- routes
-- transport types
-- obstacles
-- facilities
-
-Return structured JSON with intent type, confidence score (0-1), and entity mentions with their positions."""
-
-async def classify_intent_and_entities(transcript, model):
-    """Classify intent and extract entities from speech transcript using Gemini."""
-    try:
-        response = model.generate_content(
-            create_classification_prompt(transcript),
-            generation_config=GenerationConfig(
-                temperature=0.1,  # Low temperature for consistent classification
-                candidate_count=1,
-                max_output_tokens=1024,
-                response_mime_type="application/json",
-                response_schema=get_response_schema()
-            )
-        )
+class IntentClassifier:
+    def __init__(self, model_path_prefix: str):
+        """Load the pre-trained intent classification model."""
+        # Load the trained model
+        self.model = tf.keras.models.load_model(f'{model_path_prefix}_model.h5')
         
-        classification = json.loads(response.text)
-        return classification
+        # Load vectorizer and label encoder
+        with open(f'{model_path_prefix}_vectorizer.pkl', 'rb') as f:
+            self.vectorizer = pickle.load(f)
         
-    except Exception as e:
-        print(f"Error in classification: {e}")
+        with open(f'{model_path_prefix}_label_encoder.pkl', 'rb') as f:
+            self.label_encoder = pickle.load(f)
+
+    def predict(self, text: str) -> Dict[str, Any]:
+        """Predict intent for input text."""
+        # Vectorize the input text
+        X = self.vectorizer.transform([text]).toarray()
+        
+        # Get prediction probabilities
+        probs = self.model.predict(X)[0]
+        pred_class = np.argmax(probs)
+        confidence = float(probs[pred_class])
+        
+        # Convert prediction to intent label
+        predicted_intent = self.label_encoder.inverse_transform([pred_class])[0]
+        
         return {
-            "intent": {"type": "unknown", "confidence": 0.0},
-            "entities": []
+            "type": predicted_intent,
+            "confidence": confidence
         }
 
-async def speech_recognition_handler(websocket):
-    try:
-        print("Client connected to speech recognition")
-        
-        # Initialize Speech-to-Text client
-        client = speech.SpeechClient.from_service_account_file(SA_JSON_FILE_PATH)
-        
-        # Initialize Gemini model
-        PROJECT_ID = 'ai-for-impact-bmth'
-        model = init_vertexai(PROJECT_ID)
-        
-        # Configure audio settings
-        config = speech.RecognitionConfig(
+class SpeechProcessor:
+    def __init__(self, intent_model_path: str):
+        self.project_id = 'ai-for-impact-bmth'
+        self.client = speech.SpeechClient.from_service_account_file(SA_JSON_FILE_PATH)
+        self.gemini_model = self.init_vertexai()
+        self.intent_classifier = IntentClassifier(intent_model_path)
+        self.config = self.get_speech_config()
+
+    def init_vertexai(self):
+        """Initialize VertexAI for entity extraction."""
+        vertexai.init(project=self.project_id, location="us-central1")
+        return GenerativeModel("gemini-1.5-flash")
+
+    def get_speech_config(self) -> speech.RecognitionConfig:
+        """Get speech recognition configuration."""
+        return speech.RecognitionConfig(
             encoding=speech.RecognitionConfig.AudioEncoding.LINEAR16,
             sample_rate_hertz=16000,
             language_code="en-US",
             model="latest_long",
             use_enhanced=True,
-            profanity_filter=False,
             enable_automatic_punctuation=True,
-            enable_spoken_punctuation=True,
-            enable_spoken_emojis=True,
             speech_contexts=[{
                 "phrases": [
                     # Navigation Commands
@@ -158,16 +122,107 @@ async def speech_recognition_handler(websocket):
                 ],
                 "boost": 20.0
             }],
-            # Audio settings for better quality
-            audio_channel_count=1,  # Mono audio
+            audio_channel_count=1,
             enable_separate_recognition_per_channel=False,
         )
 
+    def _get_entity_schema(self) -> Dict:
+        """Get schema for entity extraction."""
+        return {
+            "type": "object",
+            "properties": {
+                "entities": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "type": {
+                                "type": "string",
+                                "enum": ["station", "poi", "terminal", "route", 
+                                       "transport_type", "obstacle", "facility"]
+                            },
+                            "value": {"type": "string"},
+                            "start": {"type": "integer"},
+                            "end": {"type": "integer"}
+                        },
+                        "required": ["type", "value", "start", "end"]
+                    }
+                }
+            },
+            "required": ["entities"]
+        }
+
+    def _create_entity_prompt(self, text: str) -> str:
+        """Create prompt for entity extraction."""
+        return f"""Extract entities from the following Jakarta public transportation query:
+
+"{text}"
+
+Identify entities including:
+- stations (MRT/KRL)
+- POIs (landmarks, malls)
+- terminals
+- routes
+- transport types
+- obstacles
+- facilities
+
+Return structured JSON with entity mentions and their positions in the text."""
+
+    async def extract_entities(self, text: str) -> Dict[str, Any]:
+        """Extract entities using Gemini."""
+        try:
+            response = self.gemini_model.generate_content(
+                self._create_entity_prompt(text),
+                generation_config=GenerationConfig(
+                    temperature=0.1,
+                    candidate_count=1,
+                    max_output_tokens=1024,
+                    response_mime_type="application/json",
+                    response_schema=self._get_entity_schema()
+                )
+            )
+            
+            return json.loads(response.text)
+            
+        except Exception as e:
+            print(f"Entity extraction error: {e}")
+            return {"entities": []}
+
+    async def process_text(self, text: str) -> Dict[str, Any]:
+        """Process text through intent classification and entity extraction."""
+        try:
+            # Get intent from trained model
+            intent_result = self.intent_classifier.predict(text)
+            
+            # Get entities from Gemini
+            entity_result = await self.extract_entities(text)
+            
+            return {
+                "intent": intent_result,
+                "entities": entity_result.get("entities", [])
+            }
+            
+        except Exception as e:
+            print(f"Processing error: {e}")
+            return {
+                "intent": {"type": "unknown", "confidence": 0.0},
+                "entities": []
+            }
+
+# Initialize speech processor with your model path
+speech_processor = SpeechProcessor(intent_model_path='./models/intent_classifier')
+
+@app.websocket("/ws")
+async def websocket_endpoint(websocket: WebSocket):
+    await websocket.accept()
+    try:
+        print("Client connected to speech recognition")
+
         streaming_config = speech.StreamingRecognitionConfig(
-            config=config, interim_results=True
+            config=speech_processor.config, interim_results=True
         )
 
-        # Start microphone stream
         with MicrophoneStream(16000, int(16000 / 10)) as stream:
             audio_generator = stream.generator()
             requests = (
@@ -175,7 +230,9 @@ async def speech_recognition_handler(websocket):
                 for content in audio_generator
             )
 
-            responses = client.streaming_recognize(streaming_config, requests)
+            responses = speech_processor.client.streaming_recognize(
+                streaming_config, requests
+            )
 
             for response in responses:
                 if not response.results:
@@ -187,66 +244,49 @@ async def speech_recognition_handler(websocket):
 
                 transcript = result.alternatives[0].transcript
 
-                # Only perform classification on final results
                 if result.is_final:
                     try:
-                        # Get intent and entity classification
-                        classification = await classify_intent_and_entities(transcript, model)
+                        # Process through both models
+                        classification = await speech_processor.process_text(transcript)
                         
-                        # Send transcript and classification to websocket client
-                        await websocket.send(json.dumps({
+                        await websocket.send_json({
                             "transcript": transcript,
                             "is_final": True,
                             "classification": classification,
                             "confidence": result.alternatives[0].confidence,
                             "timestamp": datetime.datetime.now().isoformat()
-                        }))
+                        })
                         
-                        # Log the classification for debugging
                         print(f"Classification for: {transcript}")
                         print(json.dumps(classification, indent=2))
                         
-                    except Exception as class_error:
-                        print(f"Classification error: {class_error}")
-                        # Send transcript without classification if there's an error
-                        await websocket.send(json.dumps({
+                    except Exception as e:
+                        print(f"Classification error: {e}")
+                        await websocket.send_json({
                             "transcript": transcript,
                             "is_final": True,
-                            "error": str(class_error),
+                            "error": str(e),
                             "confidence": result.alternatives[0].confidence,
                             "timestamp": datetime.datetime.now().isoformat()
-                        }))
+                        })
                 else:
-                    # Send interim results without classification
-                    await websocket.send(json.dumps({
+                    await websocket.send_json({
                         "transcript": transcript,
                         "is_final": False,
                         "confidence": result.alternatives[0].confidence,
                         "timestamp": datetime.datetime.now().isoformat()
-                    }))
+                    })
 
-                # Check for exit commands
-                if result.is_final and any(word in transcript.lower() for word in ["exit", "quit"]):
-                    print("Exit command received")
-                    break
-
-    except websockets.exceptions.ConnectionClosed:
-        print("Client disconnected from speech recognition")
     except Exception as e:
-        print(f"Error in speech recognition: {e}")
-        # Try to send error message to client if connection is still open
+        print(f"WebSocket error: {e}")
         try:
-            await websocket.send(json.dumps({
+            await websocket.send_json({
                 "error": str(e),
                 "timestamp": datetime.datetime.now().isoformat()
-            }))
+            })
         except:
             pass
 
-async def main():
-    async with websockets.serve(speech_recognition_handler, "localhost", 8000) as server:
-        print("Speech recognition server started on ws://localhost:8000")
-        await asyncio.Future()  # run forever
-
 if __name__ == "__main__":
-    asyncio.run(main())
+    import uvicorn
+    uvicorn.run(app, host="0.0.0.0", port=8000)
