@@ -1,34 +1,27 @@
-// src/hooks/useCamera.js
-import { useEffect, useRef } from 'react';
+// hooks/useCamera.js
+import { useRef, useEffect } from 'react';
 
 export const useCamera = () => {
   const videoRef = useRef(null);
   const canvasRef = useRef(null);
 
   useEffect(() => {
-    const startCamera = async () => {
-      try {
-        const stream = await navigator.mediaDevices.getUserMedia({ 
-          video: {
-            width: { ideal: 430 },
-            facingMode: 'environment'
-          }
-        });
-        
-        if (videoRef.current) {
-          videoRef.current.srcObject = stream;
-        }
-      } catch (err) {
-        console.error("Error accessing camera:", err);
+    // Initialize canvas size when refs are available
+    const initializeCanvas = () => {
+      if (videoRef.current && canvasRef.current) {
+        canvasRef.current.width = videoRef.current.videoWidth;
+        canvasRef.current.height = videoRef.current.videoHeight;
       }
     };
 
-    startCamera();
+    // Add event listener for when video metadata is loaded
+    if (videoRef.current) {
+      videoRef.current.addEventListener('loadedmetadata', initializeCanvas);
+    }
 
     return () => {
-      if (videoRef.current?.srcObject) {
-        const tracks = videoRef.current.srcObject.getTracks();
-        tracks.forEach(track => track.stop());
+      if (videoRef.current) {
+        videoRef.current.removeEventListener('loadedmetadata', initializeCanvas);
       }
     };
   }, []);

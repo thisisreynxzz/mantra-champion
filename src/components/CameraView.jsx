@@ -1,34 +1,57 @@
-// src/components/CameraView.jsx
-import React from 'react';
-import { Volume2 } from 'lucide-react';
+// components/CameraView.jsx
+import React, { useEffect, useState } from 'react';
 
-export const CameraView = ({ videoRef, canvasRef, detections }) => (
-  <div className="h-[280px] w-full bg-gray-200 relative">
-    <video 
-      ref={videoRef}
-      autoPlay
-      playsInline
-      className="w-full h-full object-cover"
-    />
-    <canvas
-      ref={canvasRef}
-      className="absolute top-0 left-0 w-full h-full"
-    />
+export const CameraView = ({ videoRef, canvasRef, detections }) => {
+  const [isActive, setIsActive] = useState(false);
 
-    <div className="absolute bottom-4 left-4 right-4 bg-white rounded-2xl p-4">
-      <div className="flex justify-between items-center">
-        <div>
-          <p className="text-black font-medium">
-            {detections.length > 0 
-              ? `Detected ${detections.length} objects` 
-              : 'No objects detected'}
-          </p>
-          <p className="text-gray-600">Point camera at objects to measure distance</p>
+  useEffect(() => {
+    if (videoRef.current) {
+      // Start the camera when the component mounts
+      navigator.mediaDevices.getUserMedia({ 
+        video: { 
+          facingMode: 'environment',
+          width: { ideal: 1280 },
+          height: { ideal: 720 }
+        } 
+      })
+      .then(stream => {
+        videoRef.current.srcObject = stream;
+        videoRef.current.play();
+        setIsActive(true);
+      })
+      .catch(err => {
+        console.error("Error accessing camera:", err);
+      });
+
+      // Cleanup function to stop the camera when component unmounts
+      return () => {
+        if (videoRef.current && videoRef.current.srcObject) {
+          const tracks = videoRef.current.srcObject.getTracks();
+          tracks.forEach(track => track.stop());
+          videoRef.current.srcObject = null;
+          setIsActive(false);
+        }
+      };
+    }
+  }, [videoRef]);
+
+  return (
+    <div className="relative w-full h-full">
+      <video
+        ref={videoRef}
+        className="w-full h-full object-cover"
+        playsInline
+        muted
+      />
+      <canvas
+        ref={canvasRef}
+        className="absolute top-0 left-0 w-full h-full pointer-events-none"
+      />
+      {!isActive && (
+        <div className="absolute inset-0 flex items-center justify-center bg-gray-900/50">
+          <p className="text-white">Activating camera...</p>
         </div>
-        <button className="text-gray-600">
-          <Volume2 size={20} />
-        </button>
-      </div>
+      )}
     </div>
-  </div>
-);
+  );
+};

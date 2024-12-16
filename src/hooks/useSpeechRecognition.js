@@ -7,6 +7,7 @@ export const useSpeechRecognition = () => {
   const [intent, setIntent] = useState(null);
   const [entities, setEntities] = useState([]);
   const [confidence, setConfidence] = useState(0);
+  const [agentResponse, setAgentResponse] = useState('');
   const wsRef = useRef(null);
 
   useEffect(() => {
@@ -33,8 +34,17 @@ export const useSpeechRecognition = () => {
                 setEntities(data.classification.entities);
                 setConfidence(data.confidence || 0);
                 
+                // Set agent response if available
+                if (data.agent_response) {
+                  setAgentResponse(data.agent_response);
+                }
+                
                 // Handle specific intents
-                handleIntent(data.classification.intent, data.classification.entities);
+                handleIntent(
+                  data.classification.intent, 
+                  data.classification.entities, 
+                  data.agent_response
+                );
               }
             }
           } catch (err) {
@@ -66,27 +76,26 @@ export const useSpeechRecognition = () => {
     };
   }, [isListening]);
 
-  const handleIntent = (intent, entities) => {
+  const handleIntent = (intent, entities, response) => {
     switch (intent.type) {
       case 'asking_for_direction':
-        // Extract destination from entities and trigger navigation
         const destination = entities.find(e => 
           ['station', 'poi', 'terminal'].includes(e.type)
         );
         if (destination) {
-          // You can emit an event or call a callback here
           console.log(`Navigation request to: ${destination.value}`);
+          console.log(`Agent response: ${response}`);
         }
         break;
         
       case 'analyzing_surroundings':
-        // Trigger surroundings analysis mode
         console.log('Analyzing surroundings...');
+        console.log(`Agent response: ${response}`);
         break;
         
       case 'service_recommendation':
-        // Handle route recommendations
         console.log('Generating service recommendations...');
+        console.log(`Agent response: ${response}`);
         break;
     }
   };
@@ -94,6 +103,7 @@ export const useSpeechRecognition = () => {
   const startListening = () => {
     console.log('Starting speech recognition...');
     setIsListening(true);
+    setAgentResponse(''); // Clear previous response
   };
 
   const stopListening = () => {
@@ -111,6 +121,7 @@ export const useSpeechRecognition = () => {
     intent,
     entities,
     confidence,
+    agentResponse,
     startListening,
     stopListening
   };

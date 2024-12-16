@@ -5,14 +5,21 @@ import numpy as np
 import base64
 from ultralytics import YOLO
 import json
+import os
 
 app = FastAPI()
 
+# Get allowed origins from environment variable or use default in development
+ALLOWED_ORIGINS = os.environ.get('ALLOWED_ORIGINS', 'http://localhost:3000,http://localhost:5173').split(',')
+if os.environ.get('VERCEL_URL'):
+    ALLOWED_ORIGINS.append(f"https://{os.environ.get('VERCEL_URL')}")
+
+# More restrictive CORS policy
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
+    allow_origins=ALLOWED_ORIGINS,
     allow_credentials=True,
-    allow_methods=["*"],
+    allow_methods=["GET", "POST"],
     allow_headers=["*"],
 )
 

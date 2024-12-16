@@ -18,6 +18,7 @@ import re
 from datetime import timedelta
 from asyncio import Lock, sleep
 from hashlib import md5
+import random
 
 app = FastAPI()
 
@@ -89,6 +90,31 @@ class SpeechProcessor:
         self.entity_cache = {}
         self.cache_ttl = 3600
         
+        # Response templates
+        self.response_templates = {
+            'asking_for_direction': [
+                "I'll guide you to {destination}. The best route will be shown on the map.",
+                "Let me help you get to {destination}. I'm calculating the best transit route for you.",
+                "I'll show you how to reach {destination} using public transportation.",
+                "I'm plotting the route to {destination} for you now.",
+                "Let me find the best way to get you to {destination}."
+            ],
+            'analyzing_surroundings': [
+                "I'll scan the area around you to identify any obstacles or points of interest.",
+                "Let me analyze your surroundings to help you navigate safely.",
+                "I'll check the environment and highlight any important objects or facilities.",
+                "Starting environmental scan to help you navigate better.",
+                "I'll identify the important features around you."
+            ],
+            'service_recommendation': [
+                "I'll find the best transit options and services available near you.",
+                "Let me check which transportation services would work best for your needs.",
+                "I'll recommend the most convenient transit options in this area.",
+                "I'll help you find the most suitable transportation services.",
+                "Let me suggest the best transit options for your journey."
+            ]
+        }
+        
         # Entity patterns for fallback
         self.entities_patterns = {
             'station': [
@@ -139,37 +165,77 @@ class SpeechProcessor:
                     "Juanda", "Sawah Besar", "Jayakarta", "Jakarta Kota",
                     "Tebet", "Cawang", "Duren Kalibata", "Pasar Minggu",
                     
-                    # TransJakarta Corridors & Major Stops
-                    "Blok M", "Harmoni", "Grogol", "Kalideres",
-                    "Pulogadung", "Kampung Melayu", "Ragunan",
-                    "Tanjung Priok", "Pluit", "Pinang Ranti",
-                    
-                    # Major Areas/Districts
-                    "Thamrin", "Sudirman", "Kuningan", "Menteng",
-                    "Senayan", "Kebayoran", "Kemang", "SCBD",
-                    "Monas", "Glodok", "Kota Tua",
-                    
-                    # Shopping Centers
-                    "Grand Indonesia", "Plaza Indonesia", "Pacific Place",
-                    "Senayan City", "Plaza Senayan", "Sarinah",
-                    "Central Park", "Taman Anggrek", "Kota Kasablanka",
-                    
-                    # Common Place Types
+                    # Common Place Types and Facilities
                     "halte", "stasiun", "terminal", "mall", "plaza",
-                    "rumah sakit", "hospital", "school", "university",
-                    "mosque", "masjid", "church", "gereja",
-                    
-                    # Common Indonesian Words in Navigation
-                    "jalan", "street", "gedung", "building",
-                    "persimpangan", "intersection", "belok", "turn",
-                    "kanan", "right", "kiri", "left", "lurus", "straight",
-                    "lewat", "through", "sampai", "until"
+                    "elevator", "escalator", "toilet", "gate", "exit", "entrance"
                 ],
                 "boost": 20.0
             }],
             audio_channel_count=1,
             enable_separate_recognition_per_channel=False,
         )
+
+    def _generate_direction_response(self, entities: List[Dict]) -> str:
+        destination = None
+        transport_type = None
+        
+        for entity in entities:
+            if entity['type'] in ['station', 'poi', 'terminal']:
+                destination = entity['value']
+            elif entity['type'] == 'transport_type':
+                transport_type = entity['value']
+        
+        if destination:
+            base_response = random.choice(self.response_templates['asking_for_direction'])
+            response = base_response.format(destination=destination)
+            
+            if transport_type:
+                response += f" We'll use the {transport_type} for this journey."
+            
+            # Add estimated time if available
+            response += " Once you confirm, I'll show you the detailed route with estimated travel time."
+            
+            return response
+        return "Could you please specify where you'd like to go?"
+
+    def _generate_surroundings_response(self, entities: List[Dict]) -> str:
+        facilities = [e['value'] for e in entities if e['type'] in ['facility', 'obstacle']]
+        
+        response = random.choice(self.response_templates['analyzing_surroundings'])
+        
+        if facilities:
+            response += f" I'll pay special attention to the {', '.join(facilities)} you mentioned."
+        
+        response += " Camera is now active to help you navigate."
+            
+        return response
+
+    def _generate_service_response(self, entities: List[Dict]) -> str:
+        transport_types = [e['value'] for e in entities if e['type'] == 'transport_type']
+        
+        response = random.choice(self.response_templates['service_recommendation'])
+        
+        if transport_types:
+            response += f" I'll focus on {', '.join(transport_types)} services."
+        
+        response += " Please wait while I gather the latest service information."
+            
+        return response
+
+    def _generate_agent_response(self, intent: Dict, entities: List[Dict]) -> str:
+        if not intent or 'type' not in intent:
+            return "I'm not sure what you're asking for. Could you please rephrase that?"
+            
+        intent_type = intent['type']
+        
+        if intent_type == 'asking_for_direction':
+            return self._generate_direction_response(entities)
+        elif intent_type == 'analyzing_surroundings':
+            return self._generate_surroundings_response(entities)
+        elif intent_type == 'service_recommendation':
+            return self._generate_service_response(entities)
+        else:
+            return "I'm not sure how to help with that. Could you try asking in a different way?"
 
     def _cache_key(self, text: str) -> str:
         return md5(text.lower().strip().encode()).hexdigest()
@@ -277,16 +343,24 @@ Return structured JSON with entity mentions and their positions in the text."""
             # Get entities with fallback and caching
             entity_result = await self.extract_entities(text)
             
+            # Generate agent response
+            agent_response = self._generate_agent_response(
+                intent_result, 
+                entity_result.get("entities", [])
+            )
+            
             return {
                 "intent": intent_result,
-                "entities": entity_result.get("entities", [])
+                "entities": entity_result.get("entities", []),
+                "agent_response": agent_response
             }
             
         except Exception as e:
             print(f"Processing error: {e}")
             return {
                 "intent": {"type": "unknown", "confidence": 0.0},
-                "entities": []
+                "entities": [],
+                "agent_response": "I'm having trouble understanding that. Could you please try again?"
             }
 
 # Initialize speech processor with your model path
@@ -325,46 +399,83 @@ async def websocket_endpoint(websocket: WebSocket):
 
                 if result.is_final:
                     try:
+                        # Process the final transcript
                         classification = await speech_processor.process_text(transcript)
                         
-                        await websocket.send_json({
+                        # Prepare the response with all the information
+                        response_data = {
                             "transcript": transcript,
                             "is_final": True,
-                            "classification": classification,
+                            "classification": {
+                                "intent": classification["intent"],
+                                "entities": classification["entities"]
+                            },
+                            "agent_response": classification["agent_response"],
                             "confidence": result.alternatives[0].confidence,
                             "timestamp": datetime.datetime.now().isoformat()
-                        })
+                        }
                         
-                        print(f"Classification for: {transcript}")
-                        print(json.dumps(classification, indent=2))
+                        # Send the response to the client
+                        await websocket.send_json(response_data)
+                        
+                        # Log the classification and response
+                        print("\n=== Speech Processing Results ===")
+                        print(f"Transcript: {transcript}")
+                        print(f"Intent: {classification['intent']}")
+                        print(f"Entities: {classification['entities']}")
+                        print(f"Agent Response: {classification['agent_response']}")
+                        print("================================\n")
                         
                     except Exception as e:
                         print(f"Classification error: {e}")
-                        await websocket.send_json({
+                        error_response = {
                             "transcript": transcript,
                             "is_final": True,
                             "error": str(e),
                             "confidence": result.alternatives[0].confidence,
                             "timestamp": datetime.datetime.now().isoformat()
-                        })
+                        }
+                        await websocket.send_json(error_response)
                 else:
-                    await websocket.send_json({
+                    # Send interim results
+                    interim_response = {
                         "transcript": transcript,
                         "is_final": False,
                         "confidence": result.alternatives[0].confidence,
                         "timestamp": datetime.datetime.now().isoformat()
-                    })
+                    }
+                    await websocket.send_json(interim_response)
 
+    except websocket.exceptions.ConnectionClosed:
+        print("Client disconnected normally")
     except Exception as e:
         print(f"WebSocket error: {e}")
         try:
-            await websocket.send_json({
+            error_message = {
                 "error": str(e),
                 "timestamp": datetime.datetime.now().isoformat()
-            })
+            }
+            await websocket.send_json(error_message)
+        except:
+            pass
+    finally:
+        try:
+            await websocket.close()
         except:
             pass
 
+@app.get("/health")
+async def health_check():
+    """Health check endpoint to verify the server is running."""
+    return {"status": "healthy", "timestamp": datetime.datetime.now().isoformat()}
+
 if __name__ == "__main__":
     import uvicorn
-    uvicorn.run(app, host="0.0.0.0", port=8000)
+    
+    uvicorn.run(
+        app, 
+        host="0.0.0.0", 
+        port=8000, 
+        log_level="info",
+        reload=False  # Set to True for development
+    )
